@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import "./App.css"
+import Photo_gallery from './components/Photo_gallery/Photo_gallery.jsx'
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     </div>
 
     <h1>Current Camp Site</h1>
-    <h1>Photo Gallery</h1>
+   <div> <Photo_gallery/></div> 
     <h1>Current Campsite</h1>
     <h1>Camp Info</h1>
     <h1>Available Sites</h1>
