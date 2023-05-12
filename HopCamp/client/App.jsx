@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import "./App.css"
-
+import Current_campsite from './components/Current_campsite/Current_campsite.jsx'
 function App() {
 
   return (
@@ -9,7 +9,7 @@ function App() {
       <h1>Header</h1>
     </div>
 
-    <h1>Current Camp Site</h1>
+    <Current_campsite />
     <h1>Photo Gallery</h1>
     <h1>Current Campsite</h1>
     <h1>Camp Info</h1>
