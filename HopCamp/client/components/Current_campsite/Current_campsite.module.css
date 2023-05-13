@@ -21,7 +21,6 @@ ol{
     padding-top:24px;
     padding-bottom: 24px;
     font-family: Calibre, Helvetica, Arial, sans-seri;
-    background-color: lightgray;
 }
 .currentCampSite a {
     font-style: inherit;
@@ -41,16 +40,12 @@ ol{
 body {
     color: rgb(51, 49, 33);
 }
-button {
-    border-style: solid;
-    font-size:18px;
+.btNormal{
 }
-button:hover {
-    background-color: red;
+.btOrange {
+    background-color: rgb(199,79,45);
+    border:none;
 }
-#availableBt {
-
-}
-#availableBt:hover {
+.btOrange:hover {
     background-color: rgb(159,63,36);
 }
