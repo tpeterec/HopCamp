@@ -41,6 +41,11 @@ body {
     color: rgb(51, 49, 33);
 }
 .btNormal{
+    background-color: white;
+    box-sizing: border-box;
+}
+.btNormal:hover{
+    border: 5px solid black
 }
 .btOrange {
     background-color: rgb(199,79,45);
