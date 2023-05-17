@@ -107,3 +107,5 @@ const CampingSpotCard = () => {
 }
 
 export default Camping_spots;
+
+export default Camping_spots
