@@ -3,10 +3,17 @@ import "./App.css"
 import 'bootstrap/dist/css/bootstrap.css';
 import Current_campsite from './Current_campsite/Current_campsite.jsx'
 import Available_sites from './Available_sites/Available_sites.jsx'
+const popUpCalender = document.getElementById('categoryList');
 function App() {
+  const handleClick=(event)=>{
+    if (popUpCalender && !popUpCalender.contains(event.target))
+      if (popUpCalender.classList.contains('show'))
+        popUpCalender.classList.toggle('show')
+  }
+
 
   return (
-    <div id='contentWrapper'>
+    <div id='contentWrapper' onClick={handleClick}>
     <div className='header'>
       <h1>Header</h1>
     </div>

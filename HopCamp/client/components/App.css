@@ -9,8 +9,8 @@ body {
   width: 100%;
   display: block;
   max-width: 1280px;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 /* #root {
   max-width: 1280px;
