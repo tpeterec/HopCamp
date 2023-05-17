@@ -1,5 +1,7 @@
 .display{
     display: block;
+    width: px;
+    justify-content: center;
 }
 button.photo-gallery-button {
     border: none;
@@ -60,11 +62,11 @@ button.photo-gallery-button {
     padding: 5px 10px;
     font-size: 18px; 
     color: black;
-    border: 0px solid rgb(178,178,178)!important; 
+    border: 0px solid rgb(178,178,178);
 }
 .morePhotos:hover{
-    color: rgb(229, 227, 211) !important;
-    background-color: rgb(72, 72, 71) !important;
+    color: rgb(229, 227, 211);
+    background-color: rgb(72, 72, 71)
 }
 
 
