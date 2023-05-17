@@ -9,3 +9,14 @@
 .top40 {
     top:40%;
 }
+.tableContainer{
+    height:250px;
+    width:300px;
+}
+td {
+    height: 40px;
+    min-width: 40px;
+}
+small {
+    font-size: 80%;
+}

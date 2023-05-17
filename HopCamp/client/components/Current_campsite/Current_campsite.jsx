@@ -1,10 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.css';
+
 import styles from './Current_campsite.module.css';
 function Current_campsite()
 {
     return (
         <div className={styles.currentCampSite}>
-            
             <div>
                 <ol className="d-flex gap-2" id="locContainer">
                     <li>

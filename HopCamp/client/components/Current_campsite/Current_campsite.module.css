@@ -42,14 +42,16 @@ body {
 }
 .btNormal{
     background-color: white;
-    box-sizing: border-box;
+    border: 1px solid black;
 }
 .btNormal:hover{
-    border: 5px solid black
+    border: 3px solid black;
+    margin:-2px;
+    margin-top: -3px;
 }
 .btOrange {
     background-color: rgb(199,79,45);
-    border:none;
+    border: none
 }
 .btOrange:hover {
     background-color: rgb(159,63,36);

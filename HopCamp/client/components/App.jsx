@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import "./App.css"
+import 'bootstrap/dist/css/bootstrap.css';
 import Current_campsite from './Current_campsite/Current_campsite.jsx'
 import Available_sites from './Available_sites/Available_sites.jsx'
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <div className='header'>
       <h1>Header</h1>
     </div>
-
+ 
     <Current_campsite />
     <h1>Photo Gallery</h1>
     <h1>Current Campsite</h1>
