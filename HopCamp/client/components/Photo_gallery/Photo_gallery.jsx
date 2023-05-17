@@ -46,7 +46,7 @@ function Photo_gallery() {
       <div className="row">
         <div className="col-md-6 d-flex justify-content-center align-items-center">
           <div overflow="hidden">
-          <div className="photo-gallery-left" style={{overflow:'hidden', marginLeft: '-28px'}}>
+          <div className="photo-gallery-left" style={{overflow:'hidden', marginLeft: '-25px'}}>
             <div className="large photo">
               <button className="photo-gallery-button" onClick={() => openModal(photoGallery)}>
                 <img
