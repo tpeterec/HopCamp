@@ -32,7 +32,8 @@
 .camp-spot-card {
     display: flex;
     flex-direction: column;
-    width: 258px;
+    width: 308px;
+    height: 363px;
     padding-left: 8px;
     padding-right: 8px;
     margin-top: 24px;
