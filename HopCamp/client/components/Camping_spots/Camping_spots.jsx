@@ -36,5 +36,3 @@ const Camping_spots = () => {
 };
 
 export default Camping_spots;
-
-export default Camping_spots

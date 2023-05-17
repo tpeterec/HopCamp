@@ -6,6 +6,8 @@ import Available_sites from './Available_sites/Available_sites.jsx'
 import Header from "./Header/Header.jsx";
 import Ratings from "./Ratings/Ratings";
 import Camping_spots from "./Camping_spots/Camping_spots";
+import Photo_gallery from './Photo_gallery/Photo_gallery';
+import Host from './Host/Host';
 
 function App() {
   const handleClick=(event)=>{
@@ -22,14 +24,14 @@ function App() {
         <Header />
       </div>
       <Current_campsite />
-      <h1>Photo Gallery (Dennis)</h1>
+      <Photo_gallery/> 
       <h1>Current Campsite (Chris)</h1>
       <h1>Camp Info (Chris)</h1>
       <Available_sites />
       <h1>Tent Sites (Chris)</h1>
       <h1>Camping Location (Dan)</h1>
       <h1>Location (Dan)</h1>
-      <h1>Hosted by (Dennis)</h1>
+      <Host/>
       <div>
         <Ratings />
       </div>
