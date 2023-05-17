@@ -16,6 +16,7 @@
 td {
     height: 40px;
     min-width: 40px;
+    font-size: 12px;
 }
 small {
     font-size: 80%;

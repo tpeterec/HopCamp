@@ -5,11 +5,15 @@ function Available_sites() {
   const days = ['Su','Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
   const [isPanelCollapsed, setIsPanelCollapsed] = useState(true);
   const [calender,setCalender] = useState([]);
+  const [calenderNext, setCalenderNext]= useState([]);
   useEffect(() => {
     const now = new Date();
     const datesInMonth= new Date(now.getFullYear(),now.getMonth()+1, 0).getDate();
     const firstDay =  now.getDay();
-    
+
+    const nextMonth = new Date(now.getFullYear(),now.getMonth()+1);
+    const datesInNextMonth= new Date(nextMonth.getFullYear(),nextMonth.getMonth()+1, 0).getDate();
+    const firstDayNext =  nextMonth.getDay();
     let arr = [];
     for (let i = 0; i < firstDay; i++)  //fill empty slot
     {
@@ -18,6 +22,15 @@ function Available_sites() {
     //speicify the length of the array, and mapping, underscore makes it so that we ignore value, and set index.
     arr= arr.concat(Array.from({length:datesInMonth},(_,index)=>index+1)); 
     setCalender(arr)
+    
+    let arrNext= [];
+    for (let i = 0; i < firstDayNext; i++)  //fill empty slot
+    {
+      arrNext.push(null);
+    }
+    //speicify the length of the array, and mapping, underscore makes it so that we ignore value, and set index.
+    arrNext= arrNext.concat(Array.from({length:datesInNextMonth},(_,index)=>index+1)); 
+    setCalenderNext(arrNext)
   },[])
 
 
@@ -103,37 +116,56 @@ function Available_sites() {
       </div>
 
       
-      <div className="collapse" id="categoryList">
-              <div className="shadow border-0 position-absolute card card-body">
-                <div className=" card card-body">
+      <div className="collapse " id="categoryList">
+              <div className="shadow border-0 position-absolute card card-body d-inline-block" style={{minHeight:'420px'}}>
+                <div className=" card card-body" style={{minHeight:'350px'}}>
                   <div id="wrapper" className="d-flex text-center">
                     <div className={styles.tableContainer}>
                       <div className="d-flex justify-content-center">
                         <strong>May 2023</strong>
                       </div>
                       <ul className="d-flex p-0 m-0 mt-2">
-                        {days.map(element=>(
-                        <small className="m-0 text-secondary pt-2" style={{width:'40px'}}>{element}</small>
+                        {days.map((element,index)=>(
+                        <small className="m-0 text-secondary pt-2" key={index} style={{width:'40px'}}>{element}</small>
                       ))}
                       </ul>
                       
                       <table>
-                      <tbody className="d-flex flex-wrap">
+                      <tbody>
+                      <tr className="d-flex flex-wrap">
                         {calender.map((date,index)=>(
                           <CalenderDate date={date} key={index}/>
                         ))}
+                      </tr>
                       </tbody>
                     </table>
                     </div>
                     
                     <div className={styles.tableContainer}>
                       <strong>June 2023</strong>
-                      
+                      <ul className="d-flex p-0 m-0 mt-2">
+                        {days.map((element,index)=>(
+                        <small className="m-0 text-secondary pt-2" key={index} style={{width:'40px'}}>{element}</small>
+                      ))}
+                      </ul>
+                      <table>
+                      <tbody>
+                      <tr className="d-flex flex-wrap">
+                        {calenderNext.map((date,index)=>(
+                          <CalenderDate date={date} key={index}/>
+                        ))}
+                      </tr>
+                    </tbody>
+                    </table>
                     </div>
 
                   </div>
                 </div>
                 <div className="fw-bold" role="button">Clear</div>
+                <div className="mt-3 d-flex justify-content-end">
+                  <div className="btn btn-outline-dark p-2 ps-4 pe-4">Skip</div>
+                </div>
+                
               </div>
             </div>
 
