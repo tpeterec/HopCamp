@@ -126,6 +126,7 @@ function Photo_gallery() {
                       // style={{ maxWidth: '50vw', maxHeight: '100%' }}
                       />
                     </button>
+                    <button className="morePhotos" onClick={() => openModal(photoGallery)}>View 10 Photos</button>
                   </div>
                 </div>
               </div>
@@ -133,7 +134,7 @@ function Photo_gallery() {
           </div>
 
        {/*modal*/}
-       <Modal show={showModal} onHide={closeModal} className="modal-dialog modal-fullscreen">
+       <Modal show={showModal} onHide={closeModal} className="modal-fullscreen">
          <Modal.Body className="modal-body-photo-gallery">
            <div className="photo-gallery-grid">
              {photoGallery.map((photoURL, index) => (
