@@ -6,9 +6,13 @@ function Calendar(props){
     const calendarNext = props.calendarNext;
     const handleDateSelect = props.handleDateSelect;
     const dateSelected= props.dateSelected;
-
+    const handleSkip = ()=>{
+        document.getElementById('categoryList').classList.toggle('show');   //toggle the show collapse
+    }
+    
     return (
-        <div className="shadow border-0 position-absolute card card-body d-inline-block" style={{minHeight:'420px'}}>
+        <div className="collapse " id="categoryList">
+        <div className="shadow border-0 position-absolute card card-body d-inline-block" style={{minHeight:'420px',zIndex: 1}}>
                 <div className=" card card-body" style={{minHeight:'350px'}}>
                   <div id="wrapper" className="d-flex text-center">
                     <div className={styles.tableContainer}>
@@ -58,9 +62,10 @@ function Calendar(props){
                 </div>
                 
                 <div className="mt-3 d-flex justify-content-end">
-                  <div className="btn btn-outline-dark p-2 ps-4 pe-4">Skip</div>
+                  <div className="btn btn-outline-dark p-2 ps-4 pe-4" onClick={handleSkip}>Skip</div>
                 </div>
                 
+              </div>
               </div>
     )
 }

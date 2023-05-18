@@ -164,7 +164,7 @@ function Available_sites() {
         </div>
       </div>
 
-      <div className="collapse " id="categoryList">
+      
         <Calendar
           calendar={calendar}
           calendarNext={calendarNext}
@@ -173,7 +173,6 @@ function Available_sites() {
           currentDate={currentDate}
           handleClear={()=>setDateSelected([])}
         />
-      </div>
 
       <div id="filterElement">
         <p className="fw-semibold mb-3">Filter by</p>
