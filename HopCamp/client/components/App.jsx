@@ -32,7 +32,7 @@ function App() {
       <h1> ^ Current Campsite^ (Genglin)</h1>
       <h1>Photo Gallery (Dennis) </h1>
       <Photo_gallery />
-      <h1>Camp Info (Chris)</h1>
+      {/* <h1>Camp Info (Chris)</h1> */}
       <Campsite_info />
       <Available_sites />
       <Tent_site />
