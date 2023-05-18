@@ -7,6 +7,7 @@ import Individual_Lodging_site from './Individual_Lodging_site';
 // import site1_campground from '/HopCamp/HopCamp/client/assets/site1 campground.webp'
 const Tent_site = () => {
     const [tentsiteData,setTentSiteData]=useState([]);
+    const [lodgingData,setlodgingData] = useState([]);
     // const tentSiteData = {
     //     id: 1,
     //     name: 'Site 1- Redwood Camp',
@@ -37,21 +38,43 @@ const Tent_site = () => {
     useEffect(()=>{
         fetch('http://localhost:5000/api/campsites').then(responses=>responses.json())
         .then(result=>{
-            setTentSiteData(result);
+            let rvArr= [];
+            let lodgingArr = [];
+            for (let element of result)
+            {
+                if (element.type === 'Lodging')
+                    lodgingArr.push(element);
+                else
+                    rvArr.push(element);
+            }
+            setTentSiteData(rvArr);
+            setlodgingData(lodgingArr);
         })
     },[])
   return (
+    <>
     <div className='tent-sites'>
         <div className='tent-sites-title'> 
             <div id="tentsite-title">Tent sites</div>
-            <div id="tentsite-availability"> 5 available</div>
+            <div id="tentsite-availability"> {tentsiteData.length} available</div>
         </div>
         {tentsiteData.map((element, index) => (
             <Individual_Tent_site key={index} data={element}/>
 
         ))}
     </div>
-  
+
+    <div className='tent-sites'>
+        <div className='tent-sites-title'> 
+            <div id="tentsite-title">Lodging</div>
+            <div id="tentsite-availability"> {lodgingData.length} available</div>
+        </div>
+        {lodgingData.map((element, index) => (
+            <Individual_Tent_site key={index} data={element}/>
+
+        ))}
+    </div>
+  </>
   )
 }
 
