@@ -130,7 +130,8 @@
 }
 
 .show-more-btn {
-    width: 127px;
+    /* width: 127px; */
+    white-space: nowrap;
     height: 48px;
     background: transparent;
     outline-width: 0px;
@@ -138,7 +139,7 @@
     outline-offset: 2px;
     padding-left: 24px;
     padding-right: 24px;
-    padding: 0px;
+    /* padding: 0px; */
     margin: 0px;
     margin-top: 32px;
     border-width: 1px;
@@ -149,4 +150,13 @@
     border-width: 2px;
     border-style: solid;
     border-color: rgb(51, 49, 33);
+}
+
+.no-underline {
+    text-decoration: none;
+    color: inherit;
+}
+
+.no-underline:hover {
+    color: inherit;
 }
