@@ -3,7 +3,7 @@ function Current_campsite() {
   return (
     <div className={styles.currentCampSite}>
       <nav className={`${styles.navState} fw-bolder`} aria-label="breadcrumb">
-        <ol className="breadcrumb">
+        <ol className="breadcrumb m-0">
           <li className="breadcrumb-item">
             <a href="#" className="text-body-secondary">United States</a>
           </li>
@@ -13,7 +13,7 @@ function Current_campsite() {
         </ol>
       </nav>
       <div id="title">
-        <h1>Yosemite's Colfax Spring</h1>
+        <h1>Salmon Creek Ranch</h1>
       </div>
       <div id="rating">
         <ol className="d-flex gap-1 align-items-center ">
@@ -37,7 +37,7 @@ function Current_campsite() {
         </ol>
       </div>
       <div id="buttonGroup">
-        <ol className="d-flex gap-3">
+        <ol className="d-flex gap-3"> 
           <button
             className={`ps-4 pe-4 fw-semibold text-white rounded-3 ${styles.btOrange}`}
           >

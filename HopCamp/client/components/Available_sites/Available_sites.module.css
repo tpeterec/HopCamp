@@ -18,6 +18,9 @@ td {
     min-width: 40px;
     font-size: 12px;
 }
+.calenderSlot:hover {
+    background-color: var(--bs-border-color);
+}
 small {
     font-size: 80%;
 }
