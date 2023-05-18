@@ -21,10 +21,11 @@ function App() {
 
 
   return (
-    <div id='contentWrapper' onClick={handleClick}>
+    <>
       <div>
         <Header />
       </div>
+      <div id='contentWrapper' onClick={handleClick}>
       <Current_campsite />
       <Photo_gallery />
       <h1>Current Campsite (Chris)</h1>
@@ -44,7 +45,7 @@ function App() {
       <h1>Camp Safety (Dennis)</h1>
       <h1>Safety & Partners (Dan)</h1>
       <h1>Footer (Chris)</h1>
-    </div>
+    </div></>
   )
 }
 

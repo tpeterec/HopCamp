@@ -176,7 +176,7 @@ function Available_sites() {
 
       <div id="filterElement">
         <p className="fw-semibold mb-3">Filter by</p>
-        <ol className="d-flex gap-3">
+        <ol className="d-flex gap-3 p-0">
           <li className="fw-semibold text-center p-1 ps-3 pe-3 border rounded-5">
             Tent sites
           </li>

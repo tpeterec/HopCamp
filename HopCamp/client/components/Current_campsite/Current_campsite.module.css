@@ -12,9 +12,6 @@
 li{
     list-style-type: none; 
 }
-ol{
-    padding: 0px;
-}
 .buttonGroup li{
     font-weight: 12px;
     align-self: center;
