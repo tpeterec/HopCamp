@@ -10,6 +10,7 @@ import Photo_gallery from './Photo_gallery/Photo_gallery';
 import Tent_site from './Tent_site/Tent_site';
 import Camping_Location from './Camping_Location/Camping_Location.jsx';
 import Host from './Host/Host';
+import Camp_safety from './Camp_safety/Camp_safety';
 
 function App() {
   const handleClick=(event)=>{
@@ -42,7 +43,7 @@ function App() {
       <div>
         <Camping_spots />
       </div>
-      <h1>Camp Safety (Dennis)</h1>
+      <Camp_safety/>
       <h1>Safety & Partners (Dan)</h1>
       <h1>Footer (Chris)</h1>
     </div></>
