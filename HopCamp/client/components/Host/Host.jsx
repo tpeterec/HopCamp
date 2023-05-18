@@ -8,7 +8,6 @@ function Host() {
     const [showModal, setShowModal] = useState(false);
 
     const handleButtonClick = () => {
-        console.log("click");
         setShowModal(true);
     };
 
@@ -53,19 +52,22 @@ function Host() {
 
             {/*modal*/}
             <div className="modal-container" style={{ overflow: "hidden" }}>
-                <Modal show={showModal} onHide={closeModal} className="modal">
-                    <Button
+                <Modal show={showModal} onHide={closeModal}>
+                    <Modal.Header closeButton></Modal.Header>
+                    {/* <Button
                         variant="secondary"
                         style={{
                             backgroundColor: "transparent",
                             border: "none",
                             hover: "dark grey",
+                            width: '15px',
+                            height: '15px'
                         }}
                         onClick={closeModal}
                         className="modal-close-button"
                     >
                         X
-                    </Button>
+                    </Button> */}
                     <Modal.Body className="modal-body-contact">
                         <div className="ask">
                             Ask John & Lesley B. a question
