@@ -1,6 +1,5 @@
 import styles from "./Current_campsite.module.css";
 function Current_campsite() {
-  const [modal, setModal] = useState(false);
 
   return (
     <div className={styles.currentCampSite}>
