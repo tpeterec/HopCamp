@@ -12,6 +12,8 @@ import Camping_Location from './Camping_Location/Camping_Location.jsx';
 import Host from './Host/Host';
 import Camp_safety from './Camp_safety/Camp_safety';
 import Campsite_info from './Campsite_info/Campsite_info';
+import Safety_Partners from './Safety_Partners/Safety_Partners.jsx';
+import ThingsNearby from './Things_Nearby/ThingsNearby.jsx';
 
 function App() {
   const handleClick=(event)=>{
@@ -36,18 +38,21 @@ function App() {
       <Campsite_info />
       <Available_sites />
       <Tent_site />
-      <h1>Camping Location (Dan)</h1>
       <Camping_Location />
       <Host/>
       <div>
         <Ratings />
       </div>
-      <h1>Things to do (Dan)</h1>
+      <h1>Things To Do Nearby (Dan)</h1>
+      {/* <ThingsNearby /> */}
       <div>
         <Camping_spots />
       </div>
+      <h1>Camp Safety (Dennis)</h1>
+      <div>
+        <Safety_Partners />
+      </div>
       <Camp_safety/>
-      <h1>Safety & Partners (Dan)</h1>
       <h1>Footer (Chris)</h1>
     </div></>
   )

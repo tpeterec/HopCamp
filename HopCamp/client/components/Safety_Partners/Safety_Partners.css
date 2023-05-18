@@ -1,6 +1,6 @@
 .component-container {
     height: 100vh;
-    width: 100wh;
+    width: 100vw;
     background-color:#f1f3ee;
     margin-left: 0px;
     margin-right: 0px;
@@ -54,13 +54,24 @@
 }
 
 .card-button{
+    display: block;
+    text-align: center;
+    padding: 10px;
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 62px;
-    border: black;
-    border-radius: 5px;
-    width: 100wh;
-    height: 100vh;
+    border: 1px solid black;
+    border-radius: 24px;
+    width: 350px;
+    height: 48px;
     z-index: 2;
+    text-decoration: none;
+    color:#28400c;
 }
+
+.card-button:hover{
+    background-color: #28400c;
+    color: white;
+}
+

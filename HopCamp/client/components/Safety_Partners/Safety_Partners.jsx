@@ -14,13 +14,12 @@ function Safety_Partners () {
                         className="card-image"
                         ></img>
                     </div>
-                    <div className="card_button">
+                    {/* <div className="card_button"> */}
                         <a
-                        // className="card-button"
+                        className="card-button"
                         href="https://www.recreateresponsibly.org/"
-                        title="Learn More"
-                        ></a>
-                    </div>
+                        >Learn More</a>
+                    {/* </div> */}
                 </div>
                 <div className="partner-card">
                     <div className="card-content">
@@ -32,8 +31,7 @@ function Safety_Partners () {
                     <a
                     className="card-button"
                     href="https://lnt.org/why/7-principles/"
-                    title="Learn More"
-                    ></a>
+                    >Learn More</a>
                 </div>
                 <div className="partner-card">
                     <div className="card-content">
@@ -45,8 +43,7 @@ function Safety_Partners () {
                     <a
                     className="card-button"
                     href="https://www.hipcamp.com/journal/company-news/fire-safety-introducing-national-weather-service-integration"
-                    title="Learn More"
-                    ></a>
+                    >Learn More</a>
                 </div>
             </div>
         </div>
