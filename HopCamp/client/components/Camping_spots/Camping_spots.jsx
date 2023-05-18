@@ -34,6 +34,8 @@ const CapmpingSportsCarousel = () => {
         activeIndex={index} onSelect={handleSelect}
         interval={null}
         indicators={false}
+        prevIcon={<span className="carousel-custom-prev-icon">&lt;</span>}
+      nextIcon={<span className="carousel-custom-next-icon">&gt;</span>}
       >
       <Carousel.Item>
         <div className="d-flex">
