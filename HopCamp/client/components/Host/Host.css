@@ -1,4 +1,5 @@
 .host-info-container{
+    display: flex;
     position: relative;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -8,33 +9,40 @@
     
 }
 
-.container-container{
-    display: grid;
-    flex-wrap: wrap;
-    flex-direction: row;
+.container-container {
+    display: flex;
+    align-items: flex-start;
     width: 100%;
     max-width: 1280px;
     min-width: 550px;
-    align-items: center;
     box-sizing: border-box;
-    margin-left: 120px  ;
+    margin-left: 120px;
     padding-top: 40px;
     padding-bottom: 40px;
-    border: 2px solid rgb(255, 196, 0); 
- }
- .host-pic{
-    position: relative;
-    box-sizing: border-box;
-    display: block;
-    width: initial;
-    height: initial;
-    background: none;
-    opacity: 1;
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-    max-width: 100%;
-    border: 2px solid rgb(255, 196, 0); 
+    border: 2px solid rgb(255, 196, 0);
+  }
+  
+ 
+  .host-info {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-button-container {
+    margin-top: auto;
+  }
+  
+  .contact-button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+ .img-circle{
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    object-fit:cover;
  }
  .avatar{
     position: absolute;
@@ -55,4 +63,19 @@
  .hosted-by{
     font-weight: 900;
     font-size:large;
+ }
+
+ .since{
+    font-weight: lighter;
+ }
+ 
+ .contact{
+    background-color: rgb(40, 42, 54);
+    color: rgb(253, 253, 253);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 140px;
+    height: 45px;
  }
