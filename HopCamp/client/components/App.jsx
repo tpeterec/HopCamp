@@ -8,6 +8,7 @@ import Ratings from "./Ratings/Ratings";
 import Camping_spots from "./Camping_spots/Camping_spots";
 import Photo_gallery from './Photo_gallery/Photo_gallery';
 import Tent_site from './Tent_site/Tent_site';
+import Camping_Location from './Camping_Location/Camping_Location.jsx';
 
 function App() {
   const handleClick=(event)=>{
@@ -31,7 +32,7 @@ function App() {
       <Available_sites />
       <Tent_site />
       <h1>Camping Location (Dan)</h1>
-      <h1>Location (Dan)</h1>
+      <Camping_Location />
       <h1>Hosted by (Dennis)</h1>
       <div>
         <Ratings />
