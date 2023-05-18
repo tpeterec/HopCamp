@@ -89,3 +89,29 @@
     line-height: 24px;
     color: rgb(92, 90, 77);
 }
+
+
+.carousel-custom-prev-icon,
+.carousel-custom-next-icon {
+  font-size: 50px;
+  color: #333333;
+  background-color: #ffffff;
+  opacity: 100%;
+  padding:0px 20px 0px 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+.carousel-custom-prev-icon {
+    margin-top:-80px;
+    margin-left: -120px;
+}
+.carousel-custom-next-icon {
+    margin-top:-80px;
+    margin-right: -120px;
+}
+
+.carousel-custom-prev-icon:hover,
+.carousel-custom-next-icon:hover {
+  background-color: #d2cece;
+}
