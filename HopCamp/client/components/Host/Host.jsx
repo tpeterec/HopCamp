@@ -25,7 +25,8 @@ function Host() {
     return (
         <div className="host-info-container">
             <div className="container-container">
-                <div className="host-pic">
+                <div className="d-flex mb-3">
+                    <div className="host-pic">
                     <img
                         alt="Avatar"
                         src="https://hipcamp-res.cloudinary.com/image/upload/c_fill,f_auto,h_80,w_80/v1475217800/profile/pdmfuoeafxiturx4dgrz.jpg"
@@ -34,14 +35,20 @@ function Host() {
                 </div>
                 <div className="host-info">
                     <div className="hosted-by">Hosted by John & Lesley B.</div>
-                    <div className="since">Joined in October 2015</div>
-                    <button
-                        className="contact-button"
+                    <div className="since text-dark">Joined in October 2015</div>
+                   
+                </div>
+                </div>
+                 <button
+                        className="btn btn-outline-dark"
                         onClick={handleButtonClick}
+                        style={{borderRadius: '8px',
+                            width: '140px',
+                            height: '45px'
+                        }}
                     >
                         Contact host
                     </button>
-                </div>
             </div>
 
             {/*modal*/}
