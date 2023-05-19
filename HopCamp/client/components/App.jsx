@@ -26,28 +26,56 @@ function App() {
                 popUpCalender.classList.toggle("show");
     };
 
-    return (
-        <>
-            <Header />
-            <div id="contentWrapper" onClick={handleClick}>
-                <Current_campsite />
-                <Photo_gallery />
-                <Campsite_info />
-                <Available_sites />
-                <Tent_site />
-                <Camping_Location />
-                <Host />
-                <Ratings />
-                <h1>Things To Do Nearby (Dan)</h1>
-                {/* <ThingsNearby /> */}
-                <Camping_spots />
-                <h1>Camp Safety (Dennis)</h1>
-                <Safety_Partners />
-                <Camp_safety />
-                <h1>Footer (Chris)</h1>
-            </div>
-        </>
-    );
+    window.addEventListener('scroll',function(){
+        const contentCurrentCampEl = document.getElementById('currentCampSites');
+        const mapEl = this.document.getElementById('stickyMap');
+        if (contentCurrentCampEl) {
+            let contentHeight = contentCurrentCampEl.getBoundingClientRect();
+            console.log(contentHeight)
+            if (this.window.scrollY >= contentHeight)
+            mapEl.classList.add('sticky');
+        else
+            mapEl.classList.remove('sticky');
+        }
+      
+        
+    })
+  return (
+    <>
+      <div>
+        <Header />
+      </div>
+      <div id='contentWrapper' onClick={handleClick}>
+      <Current_campsite />
+      <h1> ^ Current Campsite^ (Genglin)</h1>
+      <h1>Photo Gallery (Dennis) </h1>
+      <Photo_gallery />
+      {/* <h1>Camp Info (Chris)</h1> */}
+      <Campsite_info />
+      <Available_sites />
+      <div className={`tentsites-map-container | container text-center`}>
+        <div className='row align-items-start'>
+          <div className={`tentsites-left| col`}>
+            <Tent_site />
+          </div>
+          <div className={`map-right | col `}>
+            <Tent_Site_Map className= {``}/>  
+          </div>
+        </div>
+      </div>
+      <Camping_Location />
+      <Host/>
+      <div>
+        <Ratings />
+      </div>
+      <h1>Things To Do Nearby (Dan)</h1>
+        <Camping_spots />
+        <Camp_safety/>
+        <Safety_Partners />
+      
+      <h1>Footer (Chris)</h1>
+    </div></>
+  )
 }
 
 export default App

@@ -37,7 +37,7 @@ const Tent_site = () => {
     //     description: "The Eagle's Nest Treehouse Farm Stay offers ..."
     // }
     useEffect(()=>{
-        fetch('http://localhost:5001/api/campsites').then(responses=>responses.json())
+        fetch('http://localhost:5000/api/campsites').then(responses=>responses.json())
         .then(result=>{
             let rvArr= [];
             let lodgingArr = [];
@@ -53,7 +53,20 @@ const Tent_site = () => {
         })
     },[])
   return (
-    <>
+    <div className="d-flex" style={{postion:'relative'}} id='currentCampSites'>
+         <div>
+        <div className="tent-sites" id="campSites">
+          <div className="tent-sites-title">
+            <div id="tentsite-title">Tent sites</div>
+            <div id="tentsite-availability">
+              {" "}
+              {tentsiteData.length} available
+            </div>
+          </div>
+          {tentsiteData.map((element, index) => (
+            <Individual_Tent_site key={index} data={element} />
+          ))}
+        </div>
             <div className='tent-sites' id='campSites'>
                 <div className='tent-sites-title'> 
                     <div id="tentsite-title">Tent sites</div>
@@ -75,7 +88,8 @@ const Tent_site = () => {
 
                 ))}
             </div>
-  </>
+            </div>
+            </div>
   )
 }
 
