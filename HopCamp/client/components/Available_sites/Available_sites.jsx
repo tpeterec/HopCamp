@@ -8,7 +8,6 @@ function Available_sites() {
   const [dateSelected, setDateSelected] = useState([]);
 
   const handleDateSelect = (value) => {
-    console.log(value)
     if (!dateSelected[0]) setDateSelected([value]);  //if dataSelected container is empty, set value 
     else if (value <= new Date(dateSelected[0])) setDateSelected([value]);  //if value Date is smaller than the previous date, overwrite the value to the previous Date
     else setDateSelected([dateSelected[0], value]);

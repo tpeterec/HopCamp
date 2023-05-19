@@ -1,5 +1,12 @@
 import styles from "./Current_campsite.module.css";
+import {useEffect, useState} from 'react'
 function Current_campsite() {
+  const [reviewCount,setReviewCount] = useState(0);
+
+  useEffect(()=>{
+    fetch('http://localhost:5000/reviewCount').then(html=>console.log(html))
+    
+  },[])
 
   return (
     <div className={styles.currentCampSite}>
@@ -31,7 +38,7 @@ function Current_campsite() {
           <span className="fw-bold">98%</span>
           <span className="fw-bold fs-5">·</span>
           <li className="fw-bold" role="button">
-            <a href="#">1092 reviews</a>
+            <a href="#">{reviewCount} reviews</a>
           </li>
           <span className="fw-bold fs-5">·</span>
           <li>Bodega Bay, California</li>
