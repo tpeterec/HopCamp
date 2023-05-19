@@ -39,6 +39,22 @@ app.get("/api/ratings", (req, res) => {
     })
 });
 
+app.get("/api/camping-spots", (req, res) => {
+    console.log(req.query);
+    pool.query("SELECT * FROM camping_spot", (err, result) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send(`Error reading CAMPING_SPOT table`);
+        } else if (result.rows.length === 0) {
+            console.log(`CAMPING_SPOT table not found`);
+            res.status(404).send(`CAMPING_SPOT table not found`);
+        } else {
+            console.log(result.rows);
+            res.json(result.rows);
+        }
+    })
+});
+
 app.listen(port,()=>{
     console.log('Listening to port ' + port);
 })
