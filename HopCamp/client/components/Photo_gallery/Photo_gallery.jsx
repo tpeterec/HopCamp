@@ -38,19 +38,17 @@ function PhotoGallery() {
     setSelectedPhoto('');
   };
 
-  if (photoGallery.length === 0) {
-    return <div>Loading...</div>;
-  } ///without this the page will not load properly///
-
 
 
   return (
-    <div className="container" style={{ maxWidth: '70vw' }}>
+    <>
+    {photoGallery.length === 0 ? <div>Loading...</div>:(
+    <div className="container m-0" style={{ maxWidth: '100vw' }}>
       <div className="display">
         <div className="row">
-          <div className="col-md-6 d-flex justify-content-center align-items-center">
+          <div className="col-md-6 d-flex justify-content-center align-items-center p-0">
             <div overflow="hidden">
-              <div className="photo-gallery-left" style={{ overflow: 'hidden', marginLeft: '-25px' }}>
+              <div className="photo-gallery-left" style={{ overflow: 'hidden' }}>
                 <div className="large photo">
                   <button className="photo-gallery-button" onClick={() => openModal(photoGallery[0])}>
                     <img
@@ -67,15 +65,15 @@ function PhotoGallery() {
             </div>
           </div>
 
-          <div className="col-sm-6">
-            <div className="photo-gallery-square" style={{ maxWidth: '50vw', overflow: 'hidden', marginLeft: '-18px' }}>
+          <div className="col-sm-6 p-0">
+            <div className="photo-gallery-square" style={{ maxWidth: '50vw', overflow: 'hidden' }}>
               <div className="row">
                 <div className="col-sm-6 mb-2 d-flex justify-content-center justify-content-md-between">
-                  <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center', marginRight: '-25px' }}>
+                  <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center' }}>
                     <button className="photo-gallery-button" onClick={() => openModal(photoGallery[2])}>
                       <img
                         alt=""
-                        sizes="45vw"
+                        sizes="100vw"
                         src={photoGallery[1].url} 
                         decoding="async"
                         data-nimg="fill"
@@ -85,7 +83,7 @@ function PhotoGallery() {
                   </div>
                 </div>
                 <div className="col-md-6 justify-content-center justify-content-md-between">
-                  <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center', marginRight: '-18px' }}>
+                  <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center' }}>
                     <button className="photo-gallery-button" onClick={() => openModal(photoGallery[4])}>
                       <img
                         alt=""
@@ -156,6 +154,9 @@ function PhotoGallery() {
         </div>
       </div>
     </div>
+    )}
+    </>
+      
   );
 }
 
