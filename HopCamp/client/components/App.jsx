@@ -25,12 +25,9 @@ function App() {
 
     return (
         <>
-            <div>
-                <Header />
-            </div>
+            <Header />
             <div id="contentWrapper" onClick={handleClick}>
                 <Current_campsite />
-                <h1>Photo Gallery (Dennis) </h1>
                 <Photo_gallery />
                 <Campsite_info />
                 <Available_sites />

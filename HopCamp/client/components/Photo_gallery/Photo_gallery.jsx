@@ -57,7 +57,7 @@ function PhotoGallery() {
                         decoding="async"
                         data-nimg="fill"
                         className="photo-gallery-img"
-                        style={{height:'100%'}}
+                        style={{height:'100%', borderRadius:"10px 0px 0px 10px"}}
                       />
                     </button>
                 </div>
@@ -87,6 +87,7 @@ function PhotoGallery() {
                           decoding="async"
                           data-nimg="fill"
                           className="photo-gallery-img"
+                          style={{borderRadius:"0px 10px 0px 0px"}}
                         />
                       </button>
                     </div>
@@ -113,6 +114,7 @@ function PhotoGallery() {
                           decoding="async"
                           data-nimg="fill"
                           className="photo-gallery-img"
+                          style={{borderRadius:"0px 0px 10px 0px"}}
                         />
                       </button>
                       <button className="morePhotos" onClick={() => openModal(photoGallery)}>View 10 Photos</button>
