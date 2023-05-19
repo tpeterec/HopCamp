@@ -7,8 +7,12 @@ import Tent_site_map from './Tent_site_map'
 
 // import site1_campground from '/HopCamp/HopCamp/client/assets/site1 campground.webp'
 const Tent_site = () => {
+    const defaultSiteAmnt = 3;
+    const [defaultTentCount,setDefaultTentCount]=useState(defaultSiteAmnt);
     const [tentsiteData,setTentSiteData]=useState([]);
     const [lodgingData,setlodgingData] = useState([]);
+    const [visibleSiteData,setVisibleSiteData] = useState([]);
+    const [updatedSiteData,setUpdatedSiteData] = useState([]);
     // const tentSiteData = {
     //     id: 1,
     //     name: 'Site 1- Redwood Camp',
@@ -36,6 +40,18 @@ const Tent_site = () => {
     //     capacity: "Sleeps 2",
     //     description: "The Eagle's Nest Treehouse Farm Stay offers ..."
     // }
+    const allSiteAmnt = tentsiteData.length;
+
+    const handleShowMore = () => { 
+        if(visibleSiteData === defaultSiteAmnt){
+            setVisibleSiteData(allSiteAmnt);
+        }else{
+            setVisibleSiteData(defaultSiteAmnt);
+            setDefaultTentCount(0,);
+            console.log(tentsiteData.slice(tentsiteData.length));
+        }
+    };
+
     useEffect(()=>{
         fetch('http://localhost:5001/api/campsites').then(responses=>responses.json())
         .then(result=>{
@@ -52,6 +68,7 @@ const Tent_site = () => {
             setlodgingData(lodgingArr);
         })
     },[])
+
   return (
     <>
             <div className='tent-sites' id='campSites'>
@@ -59,10 +76,12 @@ const Tent_site = () => {
                     <div id="tentsite-title">Tent sites</div>
                     <div id="tentsite-availability"> {tentsiteData.length} available</div>
                 </div>
-                {tentsiteData.map((element, index) => (
+                {tentsiteData.slice(defaultTentCount).map((element, index) => (
                     <Individual_Tent_site key={index} data={element}/>
 
                 ))}
+                <button className='show-more-btn' onClick={handleShowMore}>{visibleSiteData === defaultSiteAmnt ? 'Show More' : 'Show Less'}</button>
+
             </div>
 
             <div className='tent-sites' >
