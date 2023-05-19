@@ -17,3 +17,12 @@ td {
 small {
     font-size: 80%;
 }
+.cardElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    color: black;
+    background: white;
+}

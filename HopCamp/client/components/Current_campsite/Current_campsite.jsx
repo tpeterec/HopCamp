@@ -8,10 +8,10 @@ function Current_campsite() {
       <nav className={`${styles.navState} fw-bolder`} aria-label="breadcrumb">
         <ol className="breadcrumb m-0">
           <li className="breadcrumb-item">
-            <a href="#" className="text-body-secondary">United States</a>
+            <a href="https://www.hipcamp.com/en-US/d/united-states/camping/all" className="text-body-secondary">United States</a>
           </li>
           <li className="breadcrumb-item">
-          <a href="#" className="text-body-secondary">California</a>
+          <a href="https://www.hipcamp.com/en-US/d/united-states/california/camping/all" className="text-body-secondary">California</a>
           </li>
         </ol>
       </nav>

@@ -43,7 +43,7 @@ function Host() {
 
       {/*modal*/}
       {/* <div className="modal-container" style={{ overflow: "hidden" }}> */}
-        <Modal show={showModal} onHide={closeModal} backdrop="static" className="modal">
+        <Modal show={showModal} onHide={closeModal} className={`modal `} style={{zIndex:1050}}>
           <Button
             variant="secondary" onClick={closeModal} className="modal-close-button">
               X
