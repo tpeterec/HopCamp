@@ -10,7 +10,7 @@ const Ratings = () => {
     useEffect(() => {
         const fetchRatings = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/ratings");
+                const response = await fetch("http://localhost:5001/api/ratings");
                 if (response.ok) {
                     const data = await response.json();
                     setRatingsData(data);
@@ -79,10 +79,26 @@ const RatingCard = (props) => {
     const originalDate = new Date(originalDateString);
 
     const month = originalDate.getMonth() + 1; // Adding 1 because months are zero-based
+    console.log(month)
+    const monthStr =
+        month === 1 ? "January" :
+        month === 2 ? "February" :
+        month === 3 ? "March" :
+        month === 4 ? "April" :
+        month === 5 ? "May" :
+        month === 6 ? "June" :
+        month === 7 ? "July" :
+        month === 8 ? "August" :
+        month === 9 ? "September" :
+        month === 10 ? "October" :
+        month === 11 ? "November" :
+        month === 12 ? "December" :
+        null;
+
     const day = originalDate.getDate();
     const year = originalDate.getFullYear();
 
-    const reformattedString = `${month.toString().padStart(2, '0')}, ${day.toString().padStart(2, '0')} ${year}`;
+    const reformattedString = `${monthStr.toString().padStart(2, '0')}, ${day.toString().padStart(2, '0')} ${year}`;
 
     return (
         <>
