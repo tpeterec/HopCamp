@@ -1,9 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useEffect, useState } from 'react'
-import './Tent_site.css'
-import Individual_Tent_site from './Individual_Tent_site';
-import Individual_Lodging_site from './Individual_Lodging_site';
-import Tent_site_map from './Tent_site_map'
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState, useRef } from "react";
+import "./Tent_site.css";
+import Individual_Tent_site from "./Individual_Tent_site";
+import Individual_Lodging_site from "./Individual_Lodging_site";
+import Tent_Site_Map from "./Tent_site_map";
 
 // import site1_campground from '/HopCamp/HopCamp/client/assets/site1 campground.webp'
 const Tent_site = () => {
@@ -37,7 +37,7 @@ const Tent_site = () => {
     //     description: "The Eagle's Nest Treehouse Farm Stay offers ..."
     // }
     useEffect(()=>{
-        fetch('http://localhost:5001/api/campsites').then(responses=>responses.json())
+        fetch('http://localhost:5000/api/campsites').then(responses=>responses.json())
         .then(result=>{
             let rvArr= [];
             let lodgingArr = [];
@@ -54,27 +54,27 @@ const Tent_site = () => {
     },[])
   return (
     <>
-            <div className='tent-sites' id='campSites'>
-                <div className='tent-sites-title'> 
-                    <div id="tentsite-title">Tent sites</div>
-                    <div id="tentsite-availability"> {tentsiteData.length} available</div>
-                </div>
-                {tentsiteData.map((element, index) => (
-                    <Individual_Tent_site key={index} data={element}/>
+    <div className='tent-sites' id='campSites'>
+        <div className='tent-sites-title'> 
+            <div id="tentsite-title">Tent sites</div>
+            <div id="tentsite-availability"> {tentsiteData.length} available</div>
+        </div>
+        {tentsiteData.map((element, index) => (
+            <Individual_Tent_site key={index} data={element}/>
 
-                ))}
-            </div>
+        ))}
+    </div>
 
-            <div className='tent-sites' >
-                <div className='tent-sites-title'> 
-                    <div id="tentsite-title">Lodging</div>
-                    <div id="tentsite-availability"> {lodgingData.length} available</div>
-                </div>
-                {lodgingData.map((element, index) => (
-                    <Individual_Tent_site key={index} data={element}/>
+    <div className='tent-sites' >
+        <div className='tent-sites-title'> 
+            <div id="tentsite-title">Lodging</div>
+            <div id="tentsite-availability"> {lodgingData.length} available</div>
+        </div>
+        {lodgingData.map((element, index) => (
+            <Individual_Tent_site key={index} data={element}/>
 
-                ))}
-            </div>
+        ))}
+    </div>
   </>
   )
 }

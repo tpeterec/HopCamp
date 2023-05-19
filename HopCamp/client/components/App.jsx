@@ -26,6 +26,21 @@ function App() {
                 popUpCalender.classList.toggle("show");
     };
 
+    window.addEventListener('scroll',function(){
+        const contentCurrentCampEl = document.getElementById('currentCampSites');
+        const mapEl = this.document.getElementById('stickyMap');
+        if (contentCurrentCampEl) {
+            let contentHeight = contentCurrentCampEl.getBoundingClientRect();
+            console.log(contentHeight)
+            if (this.window.scrollY >= contentHeight)
+            mapEl.classList.add('sticky');
+        else
+            mapEl.classList.remove('sticky');
+        }
+      
+        
+    })
+
     return (
         <>
             <Header />
@@ -33,7 +48,7 @@ function App() {
                 <Current_campsite />
                 <Photo_gallery />
                 <Campsite_info />
-                <Available_sites />
+                <Available_sites popupCalenderEl ={popupCalenderEl} />
                 <Tent_site />
                 <Camping_Location />
                 <Host />
