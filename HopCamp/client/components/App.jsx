@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useRef } from 'react'
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.css';
 import Current_campsite from './Current_campsite/Current_campsite.jsx'
@@ -17,54 +17,37 @@ import ThingsNearby from './Things_Nearby/ThingsNearby.jsx';
 import Tent_Site_Map from './Tent_site/Tent_site_map';
 
 function App() {
+    const popupCalenderEl = useRef(null);
     const handleClick = (event) => {
-        const popUpCalender = document.getElementById("categoryList");
+        const popUpCalender = popupCalenderEl.current;
+        console.log(popUpCalender);
         if (popUpCalender && !popUpCalender.contains(event.target))
             if (popUpCalender.classList.contains("show"))
                 popUpCalender.classList.toggle("show");
     };
 
-  return (
-    <>
-      <div>
-        <Header />
-      </div>
-      <div id='contentWrapper' onClick={handleClick}>
-      <Current_campsite />
-      <h1> ^ Current Campsite^ (Genglin)</h1>
-      <h1>Photo Gallery (Dennis) </h1>
-      <Photo_gallery />
-      {/* <h1>Camp Info (Chris)</h1> */}
-      <Campsite_info />
-      <Available_sites />
-      <div className={`tentsites-map-container | container text-center`}>
-        <div className='row align-items-start'>
-          <div className={`tentsites-left| col`}>
-            <Tent_site />
-          </div>
-          <div className={`map-right | col `}>
-            <Tent_Site_Map className= {``}/>  
-          </div>
-        </div>
-      </div>
-      <Camping_Location />
-      <Host/>
-      <div>
-        <Ratings />
-      </div>
-      <h1>Things To Do Nearby (Dan)</h1>
-      {/* <ThingsNearby /> */}
-      <div>
-        <Camping_spots />
-      </div>
-      <h1>Camp Safety (Dennis)</h1>
-      <div>
-        <Safety_Partners />
-      </div>
-      <Camp_safety/>
-      <h1>Footer (Chris)</h1>
-    </div></>
-  )
+    return (
+        <>
+            <Header />
+            <div id="contentWrapper" onClick={handleClick}>
+                <Current_campsite />
+                <Photo_gallery />
+                <Campsite_info />
+                <Available_sites />
+                <Tent_site />
+                <Camping_Location />
+                <Host />
+                <Ratings />
+                <h1>Things To Do Nearby (Dan)</h1>
+                {/* <ThingsNearby /> */}
+                <Camping_spots />
+                <h1>Camp Safety (Dennis)</h1>
+                <Safety_Partners />
+                <Camp_safety />
+                <h1>Footer (Chris)</h1>
+            </div>
+        </>
+    );
 }
 
 export default App
