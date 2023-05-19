@@ -126,13 +126,14 @@ function PhotoGallery() {
 
           {/*modal*/}
           <Modal show={showModal} onHide={closeModal} className="modal-fullscreen" style={{zIndex:1050}}>
-            <Modal.Body className="modal-body-photo-gallery">
+            <Modal.Body className="modal-body-photo-gallery p-0" style={{zIndex:1050}} >
               <div className="photo-gallery-grid">
                 {photoGallery.map((photoGallery, index) => (
                   <img
                     key={index}
                     src={photoGallery.url}
                     alt=""
+                    size="100vw"
                     className="modal-photo"
                   />
                 ))}
