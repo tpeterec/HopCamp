@@ -17,13 +17,12 @@ import ThingsNearby from './Things_Nearby/ThingsNearby.jsx';
 import Tent_Site_Map from './Tent_site/Tent_site_map';
 
 function App() {
-  const handleClick=(event)=>{
-    const popUpCalender = document.getElementById('categoryList');
-    if (popUpCalender && !popUpCalender.contains(event.target))
-      if (popUpCalender.classList.contains('show'))
-        popUpCalender.classList.toggle('show')
-  }
-
+    const handleClick = (event) => {
+        const popUpCalender = document.getElementById("categoryList");
+        if (popUpCalender && !popUpCalender.contains(event.target))
+            if (popUpCalender.classList.contains("show"))
+                popUpCalender.classList.toggle("show");
+    };
 
   return (
     <>

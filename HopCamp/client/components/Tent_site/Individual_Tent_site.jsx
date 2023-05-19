@@ -3,7 +3,6 @@ import React from 'react'
 const Individual_site = (props) => {
     const discount = .8;    //discount for the whole site.
     const tentSiteData = props.data;
-    console.log(tentSiteData);
 
   return (
     <div>

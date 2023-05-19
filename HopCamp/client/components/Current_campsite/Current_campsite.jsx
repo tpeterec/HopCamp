@@ -1,15 +1,17 @@
 import styles from "./Current_campsite.module.css";
+import {useEffect, useState} from 'react'
 function Current_campsite() {
+  //const [reviewCount,setReviewCount] = useState(0);
 
   return (
     <div className={styles.currentCampSite}>
       <nav className={`${styles.navState} fw-bolder`} aria-label="breadcrumb">
         <ol className="breadcrumb m-0">
           <li className="breadcrumb-item">
-            <a href="#" className="text-body-secondary">United States</a>
+            <a href="https://www.hipcamp.com/en-US/d/united-states/camping/all" className="text-body-secondary">United States</a>
           </li>
           <li className="breadcrumb-item">
-          <a href="#" className="text-body-secondary">California</a>
+          <a href="https://www.hipcamp.com/en-US/d/united-states/california/camping/all" className="text-body-secondary">California</a>
           </li>
         </ol>
       </nav>
@@ -31,7 +33,7 @@ function Current_campsite() {
           <span className="fw-bold">98%</span>
           <span className="fw-bold fs-5">·</span>
           <li className="fw-bold" role="button">
-            <a href="#">1092 reviews</a>
+            <a href="https://www.hipcamp.com/en-US/land/california-salmon-creek-ranch-4kk9hl90/reviews">1098 reviews</a>
           </li>
           <span className="fw-bold fs-5">·</span>
           <li>Bodega Bay, California</li>

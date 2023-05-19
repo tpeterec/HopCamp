@@ -18,10 +18,8 @@ button.photo-gallery-button {
 }
 .photo-gallery-square {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: auto auto;
+    gap:5px
     /* border: 1px solid red; */
    
   }
@@ -57,10 +55,10 @@ button.photo-gallery-button {
     bottom: 20px; 
     right: 16px; 
     border-radius: 6px;
-    background-color: rgb(40, 42, 54);
-    padding: 5px 10px;
-    font-size: 18px; 
-    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 15px; 
+    color: rgb(40, 42, 54);
     border: 0px solid rgb(178,178,178);
 }
 .morePhotos:hover{
@@ -73,7 +71,7 @@ button.photo-gallery-button {
   filter: brightness(0.7); 
 }
 
-//modal//
+/*modal*/
 
 .modal-fullscreen {
     position: relative;
@@ -84,6 +82,7 @@ button.photo-gallery-button {
     align-items: flex-start; 
     justify-content: flex-start; 
 }
+
 .modal-close-button{
     position: absolute;
     top: 0px;
