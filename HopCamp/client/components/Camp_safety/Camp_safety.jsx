@@ -6,6 +6,7 @@ function Camp_safety() {
     <div className="safety-component-container">
       <div className="safety-heading">Safety at Hopcamp</div>
       <div className="safety-card-container">
+        <div className="top">
         <div className="safety-card">
           <div className="safety-card-content">
             <img
@@ -29,12 +30,13 @@ function Camp_safety() {
           </a>
           {/* </div> */}
         </div>
-        <div className="safety-card">
+       </div>
+        <div className="safety-card" data-card-name="bottom2">
           <div className="safety-card-content">
             <img
               src="https://hipcamp-res.cloudinary.com/f_auto,c_limit,w_950,q_auto/internal/hosting_standards_text.png"
               className="safety-card-image"
-              altName="bot2"
+              
             ></img>
           </div>
           <a
@@ -44,12 +46,12 @@ function Camp_safety() {
             Learn More
           </a>
         </div>
-        <div className="safety-card">
+        <div className="safety-card" data-card-name="bottom2">
           <div className="safety-card-content">
             <img
               src="https://hipcamp-res.cloudinary.com/f_auto,c_limit,w_950,q_auto/internal/hipcamper_standards_text.png"
               className="safety-card-image"
-              altName="bot3"
+              
             ></img>
           </div>
           <a
