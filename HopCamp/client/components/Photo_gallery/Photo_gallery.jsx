@@ -41,98 +41,89 @@ function PhotoGallery() {
 
 
   return (
-    <>
-    {photoGallery.length === 0 ? <div>Loading...</div>:(
-    <div className="container m-0" style={{ maxWidth: '100vw' }}>
-      <div className="display">
-        <div className="row">
-          <div className="col-md-6 d-flex justify-content-center align-items-center p-0">
-            <div overflow="hidden">
-              <div className="photo-gallery-left" style={{ overflow: 'hidden' }}>
-                <div className="large photo">
-                  <button className="photo-gallery-button" onClick={() => openModal(photoGallery[0])}>
-                    <img
-                      alt=""
-                      sizes="45vw"
-                      src={photoGallery[0].url} 
-                      decoding="async"
-                      data-nimg="fill"
-                      className="photo-gallery-img"
-                    />
-                  </button>
+    <div className="container p-0" style={{ maxWidth: '100vw' }}>
+    <div className="display">
+      {photoGallery.length === 0 ? (
+        <div>Loading...</div>
+      ) : (
+        <>
+          <div className="d-flex" style={{maxHeight:'500px', gap:'5px'}}>
+              <div overflow="hidden">
+                <div className="photo-gallery-left" style={{height:'100%'}}>
+                    <button className="photo-gallery-button" onClick={() => openModal(photoGallery[0])}  style={{height:'100%'}}>
+                      <img
+                        alt=""
+                        src={photoGallery[0].url} 
+                        decoding="async"
+                        data-nimg="fill"
+                        className="photo-gallery-img"
+                        style={{height:'100%'}}
+                      />
+                    </button>
                 </div>
               </div>
-            </div>
+           
+
+              <div className="photo-gallery-square" style={{ maxWidth: '50vw'}}>
+                
+                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center'}}>
+                      <button className="photo-gallery-button" onClick={() => openModal(photoGallery[2])} style={{height:'100%'}}>
+                        <img
+                          alt=""
+                          sizes="45vw"
+                          src={photoGallery[1].url} 
+                          decoding="async"
+                          data-nimg="fill"
+                          className="photo-gallery-img"
+                        />
+                      </button>
+                    </div>
+                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center' }}>
+                      <button className="photo-gallery-button" onClick={() => openModal(photoGallery[4])} style={{height:'100%'}}> 
+                        <img
+                          alt=""
+                          sizes="45vw"
+                          src={photoGallery[2].url} 
+                          decoding="async"
+                          data-nimg="fill"
+                          className="photo-gallery-img"
+                        />
+                      </button>
+                    </div>
+                
+                
+                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center'}}>
+                      <button className="photo-gallery-button" onClick={() => openModal(photoGallery[6])} style={{height:'100%'}}>
+                        <img
+                          alt=""
+                          sizes="45vw"
+                          src={photoGallery[3].url} 
+                          decoding="async"
+                          data-nimg="fill"
+                          className="photo-gallery-img"
+                        />
+                      </button>
+                    </div>
+                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center' } }>
+                      <button className="photo-gallery-button" onClick={() => openModal(photoGallery[8]) } style={{height:'100%'}}>
+                        <img
+                          alt=""
+                          sizes="45vw"
+                          src={photoGallery[4].url} 
+                          decoding="async"
+                          data-nimg="fill"
+                          className="photo-gallery-img"
+                        />
+                      </button>
+                      <button className="morePhotos" onClick={() => openModal(photoGallery)}>View 10 Photos</button>
+                    </div>
+                
+              </div>
+            
           </div>
 
-          <div className="col-sm-6 p-0">
-            <div className="photo-gallery-square" style={{ maxWidth: '50vw', overflow: 'hidden' }}>
-              <div className="row">
-                <div className="col-sm-6 mb-2 d-flex justify-content-center justify-content-md-between">
-                  <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center' }}>
-                    <button className="photo-gallery-button" onClick={() => openModal(photoGallery[2])}>
-                      <img
-                        alt=""
-                        sizes="100vw"
-                        src={photoGallery[1].url} 
-                        decoding="async"
-                        data-nimg="fill"
-                        className="photo-gallery-img"
-                      />
-                    </button>
-                  </div>
-                </div>
-                <div className="col-md-6 justify-content-center justify-content-md-between">
-                  <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center' }}>
-                    <button className="photo-gallery-button" onClick={() => openModal(photoGallery[4])}>
-                      <img
-                        alt=""
-                        sizes="45vw"
-                        src={photoGallery[2].url} 
-                        decoding="async"
-                        data-nimg="fill"
-                        className="photo-gallery-img"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-6 justify-content-center justify-content-md-between">
-                  <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center', marginRight: '19px' }}>
-                    <button className="photo-gallery-button" onClick={() => openModal(photoGallery[6])}>
-                      <img
-                        alt=""
-                        sizes="45vw"
-                        src={photoGallery[3].url} 
-                        decoding="async"
-                        data-nimg="fill"
-                        className="photo-gallery-img"
-                      />
-                    </button>
-                  </div>
-                </div>
-                <div className="col-md-6 justify-content-center justify-content-md-between">
-                  <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center', marginRight: '28px' }}>
-                    <button className="photo-gallery-button" onClick={() => openModal(photoGallery[8])}>
-                      <img
-                        alt=""
-                        sizes="45vw"
-                        src={photoGallery[4].url} 
-                        decoding="async"
-                        data-nimg="fill"
-                        className="photo-gallery-img"
-                      />
-                    </button>
-                    <button className="morePhotos" onClick={() => openModal(photoGallery)}>View 10 Photos</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         {/*modal*/}
-          <Modal show={showModal} onHide={closeModal} className="modal-fullscreen">
+          {/*modal*/}
+          <Modal show={showModal} onHide={closeModal} className="modal-fullscreen" style={{zIndex:1050}}>
             <Modal.Body className="modal-body-photo-gallery">
               <div className="photo-gallery-grid">
                 {photoGallery.map((photoGallery, index) => (
@@ -146,17 +137,12 @@ function PhotoGallery() {
               </div>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={closeModal} className="modal-close-button">
-                &lt; {/* The arrow symbol */}
-              </Button>
             </Modal.Footer>
           </Modal>
-        </div>
-      </div>
+        </>
+      )}
     </div>
-    )}
-    </>
-      
+  </div>
   );
 }
 

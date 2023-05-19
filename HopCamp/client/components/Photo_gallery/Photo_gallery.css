@@ -18,10 +18,8 @@ button.photo-gallery-button {
 }
 .photo-gallery-square {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: auto auto;
+    gap:5px
     /* border: 1px solid red; */
    
   }
@@ -58,13 +56,14 @@ button.photo-gallery-button {
     right: 16px; 
     border-radius: 6px;
     background-color: white;
-    padding: 5px 10px;
-    font-size: 18px; 
-    color: black;
+    padding: 10px 20px;
+    font-size: 15px; 
+    color: rgb(40, 42, 54);
     border: 0px solid rgb(178,178,178);
 }
 .morePhotos:hover{
-    background-color: rgb(240, 239, 236);
+    color: rgb(229, 227, 211);
+    background-color: rgb(72, 72, 71)
 }
 
 
