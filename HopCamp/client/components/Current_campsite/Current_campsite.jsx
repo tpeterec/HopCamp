@@ -3,11 +3,6 @@ import {useEffect, useState} from 'react'
 function Current_campsite() {
   //const [reviewCount,setReviewCount] = useState(0);
 
-  useEffect(()=>{
-    fetch('http://localhost:5000/reviewCount').then(html=>console.log(html))
-    
-  },[])
-
   return (
     <div className={styles.currentCampSite}>
       <nav className={`${styles.navState} fw-bolder`} aria-label="breadcrumb">
