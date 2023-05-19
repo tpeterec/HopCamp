@@ -48,11 +48,11 @@ function App() {
       <div>
         <Camping_spots />
       </div>
+      <Camp_safety/>
       <h1>Camp Safety (Dennis)</h1>
       <div>
         <Safety_Partners />
       </div>
-      <Camp_safety/>
       <h1>Footer (Chris)</h1>
     </div></>
   )
