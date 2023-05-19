@@ -1,2 +1,10 @@
 ###
-GET http://localhost:5000/api/campsites
+GET http://localhost:5001/api/campsites
+
+
+###
+GET http://localhost:5001/api/ratings
+
+
+###
+GET http://localhost:5001/api/camping-spots
