@@ -38,8 +38,16 @@
     /* border: 1px solid lightgray; */
 }
 
-.camp-spot-img {
+.camp-spot-img-wrapper {
+    width: 292px;
+    height: 219px;
     border-radius: 16px;
+    overflow: hidden;
+}
+
+.camp-spot-img {
+    width: auto;
+    height: 100%;
 }
 
 .camp-spot-rating-container {
@@ -90,28 +98,34 @@
     color: rgb(92, 90, 77);
 }
 
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    cursor: auto;
+}
 
 .carousel-custom-prev-icon,
 .carousel-custom-next-icon {
-  font-size: 50px;
-  color: #333333;
-  background-color: #ffffff;
-  opacity: 100%;
-  padding:0px 20px 0px 20px;
-  border-radius: 100%;
-  cursor: pointer;
-  text-decoration: none;
+    font-size: 30px;
+    color: #333333;
+    background-color: #ffffff;
+    padding: 0px 10px 3px 9px;
+    border-radius: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 .carousel-custom-prev-icon {
-    margin-top:-80px;
-    margin-left: -120px;
+    margin-top: -190px;
+    margin-left: -220px;
 }
+
 .carousel-custom-next-icon {
-    margin-top:-80px;
+    margin-top: -190px;
     margin-right: -120px;
 }
 
 .carousel-custom-prev-icon:hover,
 .carousel-custom-next-icon:hover {
-  background-color: #d2cece;
+    background-color: #d2cece;
 }
