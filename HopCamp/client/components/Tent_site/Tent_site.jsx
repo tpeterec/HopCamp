@@ -53,7 +53,7 @@ const Tent_site = () => {
     },[])
   return (
     <>
-    <div className='tent-sites'>
+    <div className='tent-sites' id='campSites'>
         <div className='tent-sites-title'> 
             <div id="tentsite-title">Tent sites</div>
             <div id="tentsite-availability"> {tentsiteData.length} available</div>
@@ -64,7 +64,7 @@ const Tent_site = () => {
         ))}
     </div>
 
-    <div className='tent-sites'>
+    <div className='tent-sites' >
         <div className='tent-sites-title'> 
             <div id="tentsite-title">Lodging</div>
             <div id="tentsite-availability"> {lodgingData.length} available</div>

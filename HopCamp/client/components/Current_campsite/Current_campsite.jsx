@@ -1,5 +1,6 @@
 import styles from "./Current_campsite.module.css";
 function Current_campsite() {
+
   return (
     <div className={styles.currentCampSite}>
       <nav className={`${styles.navState} fw-bolder`} aria-label="breadcrumb">
@@ -38,11 +39,12 @@ function Current_campsite() {
       </div>
       <div id="buttonGroup">
         <ol className="d-flex gap-3 p-0"> 
-          <button
-            className={`ps-4 pe-4 fw-semibold text-white rounded-3 ${styles.btOrange}`}
+        <button className={`ps-4 pe-4 fw-semibold rounded-3 ${styles.btOrange}`}> <a
+            href='#campSites' className='text-white text-decoration-none'
           >
             See available sites
-          </button>
+          </a></button>
+         
           <button
             className={`p-2 ps-4 pe-4 fw-semibold rounded-3 ${styles.btNormal}`}
           >
@@ -60,7 +62,7 @@ function Current_campsite() {
             Share
           </button>
           <button
-            className={`p-2 ps-4 pe-4 fw-bold rounded-3 ${styles.btNormal}`}
+            className={`p-2 ps-4 pe-4 fw-bold rounded-3 ${styles.btNormal}`} onClick={()=>setModal(true)}
           >
             <svg
               className="me-2"
@@ -77,7 +79,13 @@ function Current_campsite() {
           </button>
         </ol>
       </div>
+      
+      
+      {/*modal*/}
+      
+
     </div>
+
   );
 }
 export default Current_campsite;

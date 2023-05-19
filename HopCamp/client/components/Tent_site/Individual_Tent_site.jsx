@@ -16,7 +16,7 @@ const Individual_site = (props) => {
                 <img id="tentsite-img-1" alt="" sizes="25vw" src={tentSiteData.imgurl} />
             </div>
             {/* THIS IS THE TENT SITE 1 */}
-            <div className={`tentsite-1-data d-flex flex-column`}>
+            <div className={`tentsite-1-data d-flex flex-column `} style={{width: '100%'}}>
                 <div className={`d-flex justify-content-between name-w-rating`}>
                     <p id='tentsite-name'>{tentSiteData.name} </p>
                     <span className='d-flex justify-content-end gap-1'>
