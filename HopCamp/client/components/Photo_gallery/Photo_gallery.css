@@ -73,7 +73,7 @@ button.photo-gallery-button {
   filter: brightness(0.7); 
 }
 
-//modal//
+/*modal*/
 
 .modal-fullscreen {
     position: relative;
@@ -84,6 +84,7 @@ button.photo-gallery-button {
     align-items: flex-start; 
     justify-content: flex-start; 
 }
+
 .modal-close-button{
     position: absolute;
     top: 0px;
