@@ -16,46 +16,38 @@ import Safety_Partners from './Safety_Partners/Safety_Partners.jsx';
 import ThingsNearby from './Things_Nearby/ThingsNearby.jsx';
 
 function App() {
-  const handleClick=(event)=>{
-    const popUpCalender = document.getElementById('categoryList');
-    if (popUpCalender && !popUpCalender.contains(event.target))
-      if (popUpCalender.classList.contains('show'))
-        popUpCalender.classList.toggle('show')
-  }
+    const handleClick = (event) => {
+        const popUpCalender = document.getElementById("categoryList");
+        if (popUpCalender && !popUpCalender.contains(event.target))
+            if (popUpCalender.classList.contains("show"))
+                popUpCalender.classList.toggle("show");
+    };
 
-
-  return (
-    <>
-      <div>
-        <Header />
-      </div>
-      <div id='contentWrapper' onClick={handleClick}>
-      <Current_campsite />
-      <h1> ^ Current Campsite^ (Genglin)</h1>
-      <h1>Photo Gallery (Dennis) </h1>
-      <Photo_gallery />
-      <h1>Camp Info (Chris)</h1>
-      <Campsite_info />
-      <Available_sites />
-      <Tent_site />
-      <Camping_Location />
-      <Host/>
-      <div>
-        <Ratings />
-      </div>
-      <h1>Things To Do Nearby (Dan)</h1>
-      {/* <ThingsNearby /> */}
-      <div>
-        <Camping_spots />
-      </div>
-      <h1>Camp Safety (Dennis)</h1>
-      <div>
-        <Safety_Partners />
-      </div>
-      <Camp_safety/>
-      <h1>Footer (Chris)</h1>
-    </div></>
-  )
+    return (
+        <>
+            <div>
+                <Header />
+            </div>
+            <div id="contentWrapper" onClick={handleClick}>
+                <Current_campsite />
+                <h1>Photo Gallery (Dennis) </h1>
+                <Photo_gallery />
+                <Campsite_info />
+                <Available_sites />
+                <Tent_site />
+                <Camping_Location />
+                <Host />
+                <Ratings />
+                <h1>Things To Do Nearby (Dan)</h1>
+                {/* <ThingsNearby /> */}
+                <Camping_spots />
+                <h1>Camp Safety (Dennis)</h1>
+                <Safety_Partners />
+                <Camp_safety />
+                <h1>Footer (Chris)</h1>
+            </div>
+        </>
+    );
 }
 
 export default App
