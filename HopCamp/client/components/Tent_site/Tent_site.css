@@ -122,3 +122,16 @@
 .bottom-line {
     border-top: 1px solid rgb(240, 239, 236);
 }
+
+.tent-map-container {
+    display: flex;
+    flex-direction: column;
+}
+.tent-sites-left {
+    width: 60%;
+
+}
+.map-right {
+    display: flex;
+    width: 40%;
+}

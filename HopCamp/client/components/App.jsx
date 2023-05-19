@@ -14,6 +14,7 @@ import Camp_safety from './Camp_safety/Camp_safety';
 import Campsite_info from './Campsite_info/Campsite_info';
 import Safety_Partners from './Safety_Partners/Safety_Partners.jsx';
 import ThingsNearby from './Things_Nearby/ThingsNearby.jsx';
+import Tent_Site_Map from './Tent_site/Tent_site_map';
 
 function App() {
   const handleClick=(event)=>{
@@ -37,7 +38,16 @@ function App() {
       {/* <h1>Camp Info (Chris)</h1> */}
       <Campsite_info />
       <Available_sites />
-      <Tent_site />
+      <div className={`tentsites-map-container | container text-center`}>
+        <div className='row align-items-start'>
+          <div className={`tentsites-left| col`}>
+            <Tent_site />
+          </div>
+          <div className={`map-right | col `}>
+            <Tent_Site_Map className= {``}/>  
+          </div>
+        </div>
+      </div>
       <Camping_Location />
       <Host/>
       <div>
