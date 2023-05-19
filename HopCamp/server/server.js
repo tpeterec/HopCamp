@@ -37,22 +37,6 @@ app.get("/api/ratings", (req, res) => {
     })
 });
 
-app.get("/api/ratings", (req, res) => {
-    console.log(req.query);
-    pool.query("SELECT * FROM rating", (err, result) => {
-        if (err) {
-            console.error(err);
-            res.status(500).send(`Error reading RATING table`);
-        } else if (result.rows.length === 0) {
-            console.log(`RATING table not found`);
-            res.status(404).send(`RATING table not found`);
-        } else {
-            console.log(result.rows);
-            res.json(result.rows);
-        }
-    })
-});
-
 app.get("/api/camping-spots", (req, res) => {
     console.log(req.query);
     pool.query("SELECT * FROM camping_spot", (err, result) => {
