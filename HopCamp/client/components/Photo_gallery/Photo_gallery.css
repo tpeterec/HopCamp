@@ -57,15 +57,14 @@ button.photo-gallery-button {
     bottom: 20px; 
     right: 16px; 
     border-radius: 6px;
-    background-color: rgb(40, 42, 54);
+    background-color: white;
     padding: 5px 10px;
     font-size: 18px; 
     color: black;
     border: 0px solid rgb(178,178,178);
 }
 .morePhotos:hover{
-    color: rgb(229, 227, 211);
-    background-color: rgb(72, 72, 71)
+    background-color: rgb(240, 239, 236);
 }
 
 
