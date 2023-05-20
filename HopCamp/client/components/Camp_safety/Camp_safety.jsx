@@ -35,7 +35,7 @@ function Camp_safety() {
         <div className="safety-card" data-card-name="bottom2">
           <div className="safety-card-content">
             <img
-              src="https://hipcamp-res.cloudinary.com/f_auto,c_limit,w_950,q_auto/internal/hipcamper_standards_text.png"
+              src="https://hipcamp-res.cloudinary.com/f_auto,c_limit,w_950,q_auto/internal/hosting_standards_text.png"
               className="safety-card-image"
               style={{width:'50%'}}
             ></img>
