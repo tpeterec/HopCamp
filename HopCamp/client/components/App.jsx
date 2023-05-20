@@ -53,7 +53,7 @@ function App() {
         <Ratings />
       </div>
       <h1>Things To Do Nearby (Dan)</h1>
-      {/* <ThingsNearby /> */}
+      <ThingsNearby />
       <div>
         <Camping_spots />
       </div>

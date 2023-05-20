@@ -2,7 +2,7 @@ import React from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Card, Button } from "react-bootstrap";
 import "./ThingsNearby.css";
-import BodegaHead from "./assets/Bodega Head.jpg"
+import BodegaHead from "./assets/Bodega_Head.jpg"
 
 const ThingsNearby = () => {
     const nearbyActivities = [

@@ -8,5 +8,5 @@ CREATE TABLE camping_spot (
     num_of_ratings INTEGER NOT NULL,
     acres INTEGER NOT NULL,
     location VARCHAR(40) NOT NULL,
-    price NIMERIC(5,2)
+    price NUMERIC(5,2)
 );
