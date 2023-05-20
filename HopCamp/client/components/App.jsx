@@ -26,20 +26,20 @@ function App() {
                 popUpCalender.classList.toggle("show");
     };
 
-    window.addEventListener('scroll',function(){
-        const contentCurrentCampEl = document.getElementById('currentCampSites');
-        const mapEl = this.document.getElementById('stickyMap');
-        if (contentCurrentCampEl) {
-            let contentHeight = contentCurrentCampEl.getBoundingClientRect();
-            console.log(contentHeight)
-            if (this.window.scrollY >= contentHeight)
-            mapEl.classList.add('sticky');
-        else
-            mapEl.classList.remove('sticky');
-        }
+    // window.addEventListener('scroll',function(){
+    //     const contentCurrentCampEl = document.getElementById('currentCampSites');
+    //     const mapEl = this.document.getElementById('stickyMap');
+    //     if (contentCurrentCampEl) {
+    //         let contentHeight = contentCurrentCampEl.getBoundingClientRect();
+    //         console.log(contentHeight)
+    //         if (this.window.scrollY >= contentHeight)
+    //         mapEl.classList.add('sticky');
+    //     else
+    //         mapEl.classList.remove('sticky');
+    //     }
       
         
-    })
+    // })
   return (
     <>
       <div>

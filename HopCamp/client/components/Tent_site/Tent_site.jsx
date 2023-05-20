@@ -75,18 +75,6 @@ const Tent_site = () => {
   return (
     <div className="d-flex" style={{postion:'relative'}} id='currentCampSites'>
          <div>
-        <div className="tent-sites" id="campSites">
-          <div className="tent-sites-title">
-            <div id="tentsite-title">Tent sites</div>
-            <div id="tentsite-availability">
-              {" "}
-              {tentsiteData.length} available
-            </div>
-          </div>
-          {tentsiteData.map((element, index) => (
-            <Individual_Tent_site key={index} data={element} />
-          ))}
-        </div>
             <div className='tent-sites' id='campSites'>
                 <div className='tent-sites-title'> 
                     <div id="tentsite-title">Tent sites</div>
