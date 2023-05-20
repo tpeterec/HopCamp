@@ -24,7 +24,10 @@ function Host() {
 
   return (
     <div className="host-info-container">
-      <div className="container-container">
+      <div style={{paddingTop: '40px',
+    paddingBottom: '40px',
+    }}>
+        <div className="container-container">
         <div className="host-pic">
           <img
             alt="Avatar"
@@ -35,18 +38,21 @@ function Host() {
         <div className="host-info">
           <div className="hosted-by">Hosted by John & Lesley B.</div>
           <div className="since">Joined in October 2015</div>
-          <button className="contact-button" onClick={handleButtonClick}>
-            Contact host
-          </button>
+          
         </div>
+        </div>
+        <button className="contact-button btn btn-outline-dark" onClick={handleButtonClick}>
+            Contact host
+        </button>
       </div>
+      
 
       {/*modal*/}
       {/* <div className="modal-container" style={{ overflow: "hidden" }}> */}
         <Modal show={showModal} onHide={closeModal} className={`modal `} style={{zIndex:1050}}>
           <Button
             variant="secondary" onClick={closeModal} className="modal-close-button">
-              X
+            X
           </Button>
           <Modal.Body className="modal-body-contact">
             <div className="ask">Ask John & Lesley B. a question</div>
