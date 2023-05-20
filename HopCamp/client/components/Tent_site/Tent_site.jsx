@@ -11,8 +11,8 @@ const Tent_site = () => {
     const [defaultTentCount,setDefaultTentCount]=useState(defaultSiteAmnt);
     const [tentsiteData,setTentSiteData]=useState([]);
     const [lodgingData,setlodgingData] = useState([]);
-    const [visibleSiteData,setVisibleSiteData] = useState([]);
-    const [updatedSiteData,setUpdatedSiteData] = useState([]);
+    // const [visibleSiteData,setVisibleSiteData] = useState([]);
+    // const [updatedSiteData,setUpdatedSiteData] = useState([]);
     // const tentSiteData = {
     //     id: 1,
     //     name: 'Site 1- Redwood Camp',
@@ -43,12 +43,13 @@ const Tent_site = () => {
     const allSiteAmnt = tentsiteData.length;
 
     const handleShowMore = () => { 
-        if(visibleSiteData === defaultSiteAmnt){
-            setVisibleSiteData(allSiteAmnt);
+        if(defaultTentCount === defaultSiteAmnt){
+            //setVisibleSiteData(allSiteAmnt);
+            setDefaultTentCount(allSiteAmnt -1);
         }else{
-            setVisibleSiteData(defaultSiteAmnt);
-            setDefaultTentCount(0,);
-            console.log(tentsiteData.slice(tentsiteData.length));
+            setDefaultTentCount(defaultSiteAmnt);
+            //setVisibleSiteData(defaultSiteAmnt);
+            //console.log(tentsiteData.slice(tentsiteData.length));
         }
     };
 
@@ -68,7 +69,9 @@ const Tent_site = () => {
             setlodgingData(lodgingArr);
         })
     },[])
-
+    useEffect(()=>{
+        console.log(defaultTentCount);
+    },[defaultTentCount])
   return (
     <>
             <div className='tent-sites' id='campSites'>
@@ -76,11 +79,11 @@ const Tent_site = () => {
                     <div id="tentsite-title">Tent sites</div>
                     <div id="tentsite-availability"> {tentsiteData.length} available</div>
                 </div>
-                {tentsiteData.slice(defaultTentCount).map((element, index) => (
+                {tentsiteData.slice(0, defaultTentCount).map((element, index) => (
                     <Individual_Tent_site key={index} data={element}/>
 
                 ))}
-                <button className='show-more-btn' onClick={handleShowMore}>{visibleSiteData === defaultSiteAmnt ? 'Show More' : 'Show Less'}</button>
+                <button className='show-more-btn' onClick={handleShowMore}>{defaultTentCount === defaultSiteAmnt ? 'Show More' : 'Show Less'}</button>
 
             </div>
 
