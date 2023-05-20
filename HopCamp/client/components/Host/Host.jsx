@@ -49,12 +49,12 @@ function Host() {
 
       {/*modal*/}
       {/* <div className="modal-container" style={{ overflow: "hidden" }}> */}
-        <Modal show={showModal} onHide={closeModal} className={`modal `} style={{zIndex:1050}}>
+        <Modal show={showModal} onHide={closeModal} className={`host-modal`} style={{zIndex:1050}}>
           <Button
-            variant="secondary" onClick={closeModal} className="modal-close-button">
+            variant="secondary" onClick={closeModal} className="host-modal-close-button">
             X
           </Button>
-          <Modal.Body className="modal-body-contact">
+          <Modal.Body className="host-modal-body-contact">
             <div className="ask">Ask John & Lesley B. a question</div>
             <div className="message-body">
               <div>Message the host</div>
@@ -63,7 +63,7 @@ function Host() {
           </Modal.Body>
           <Modal.Footer>
             <Button
-              variant="secondary" onClick={handleOnClick} className="modal-send-button">
+              variant="secondary" onClick={handleOnClick} className="host-modal-send-button">
               Send message
             </Button>
           </Modal.Footer>
