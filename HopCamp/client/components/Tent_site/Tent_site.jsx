@@ -38,6 +38,7 @@ const Tent_site = () => {
     // }
     useEffect(()=>{
         fetch('http://localhost:5000/api/campsites').then(responses=>responses.json())
+        fetch('http://localhost:5000/api/campsites').then(responses=>responses.json())
         .then(result=>{
             let rvArr= [];
             let lodgingArr = [];
@@ -53,14 +54,27 @@ const Tent_site = () => {
         })
     },[])
   return (
-    <>
-    <div className='tent-sites' id='campSites'>
-        <div className='tent-sites-title'> 
+    <div className="d-flex" style={{postion:'relative'}} id='currentCampSites'>
+         <div>
+        <div className="tent-sites" id="campSites">
+          <div className="tent-sites-title">
             <div id="tentsite-title">Tent sites</div>
-            <div id="tentsite-availability"> {tentsiteData.length} available</div>
+            <div id="tentsite-availability">
+              {" "}
+              {tentsiteData.length} available
+            </div>
+          </div>
+          {tentsiteData.map((element, index) => (
+            <Individual_Tent_site key={index} data={element} />
+          ))}
         </div>
-        {tentsiteData.map((element, index) => (
-            <Individual_Tent_site key={index} data={element}/>
+            <div className='tent-sites' id='campSites'>
+                <div className='tent-sites-title'> 
+                    <div id="tentsite-title">Tent sites</div>
+                    <div id="tentsite-availability"> {tentsiteData.length} available</div>
+                </div>
+                {tentsiteData.map((element, index) => (
+                    <Individual_Tent_site key={index} data={element}/>
 
         ))}
     </div>
@@ -73,9 +87,10 @@ const Tent_site = () => {
         {lodgingData.map((element, index) => (
             <Individual_Tent_site key={index} data={element}/>
 
-        ))}
-    </div>
-  </>
+                ))}
+            </div>
+            </div>
+            </div>
   )
 }
 
