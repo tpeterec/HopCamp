@@ -93,7 +93,7 @@ const Tent_site = () => {
             <div id="tentsite-title">Lodging</div>
             <div id="tentsite-availability"> {lodgingData.length} available</div>
         </div>
-        {lodgingData.map((element, index) => (
+        {lodgingData.map((element,index) => (
             <Individual_Tent_site key={index} data={element}/>
 
                 ))}
