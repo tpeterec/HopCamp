@@ -32,9 +32,9 @@ function Camp_safety() {
           {/* </div> */}
         </div>
        </div>
-       <div className="row gap-4 p-0 m-0" style={{width:'100%'}}>
-        <div className="safety-card p-0 m-0" data-card-name="bottom2">
-          <div className="safety-card-content">
+       <div className="d-flex gap-4 p-0 m-0 " style={{width:'100%'}}>
+        <div className="safety-card p-0 m-0 flex-fill" data-card-name="bottom2">
+          <div className="safety-card-content ">
             <img
               src="https://hipcamp-res.cloudinary.com/f_auto,c_limit,w_950,q_auto/internal/hosting_standards_text.png"
               className="safety-card-image"
@@ -49,7 +49,7 @@ function Camp_safety() {
             Learn More
           </a>
         </div>
-        <div className="safety-card p-0 m-0" data-card-name="bottom2">
+        <div className="safety-card p-0 m-0 flex-fill" data-card-name="bottom2">
           <div className="safety-card-content">
             <img
               src="https://hipcamp-res.cloudinary.com/f_auto,c_limit,w_1120,q_auto/internal/hipcamper_standards_text_wide.png"

@@ -22,7 +22,6 @@ function App() {
     const popupCalenderEl = useRef(null);
     const handleClick = (event) => {
         const popUpCalender = popupCalenderEl.current;
-        console.log(popUpCalender);
         if (popUpCalender && !popUpCalender.contains(event.target))
             if (popUpCalender.classList.contains("show"))
                 popUpCalender.classList.toggle("show");
@@ -45,34 +44,31 @@ function App() {
   return (
     <>
       <Header />
-      <div className='contentWrapper' onClick={handleClick}>
-        <Current_campsite />
-        <Photo_gallery />
-        <Campsite_info />
-        <Available_sites />
-        <div className={`tentsites-map-container | container text-center`}>
-          <div className='row align-items-start'>
-            <div className={`tentsites-left| col`}>
-              <Tent_site />
-            </div>
-            <div className={`map-right | col `}>
-              <Tent_Site_Map className= {``}/>  
-            </div>
+      <div id='contentWrapper' onClick={handleClick}>
+      <Current_campsite />
+      <Photo_gallery />
+      <Campsite_info />
+      <Available_sites popupCalenderEl={popupCalenderEl}/>
+      <div className={`tentsites-map-container | container text-center`}>
+        <div className='row align-items-start'>
+          <div className={`tentsites-left| col`}>
+            <Tent_site />
+          </div>
+          <div className={`map-right | col `}>
+            <Tent_Site_Map className= {``}/>  
           </div>
         </div>
-        <Camping_Location />
-        <Host/>
       </div>
-        <Ratings />
-        {/* <ThingsNearby /> */}
-        <Camping_spots />
-        <Campers_also />
-      <div className='contentWrapper'>
-        <Camp_safety />
-        <Safety_Partners />
-        <Footer />
-      </div>
-    </>
+      <Camping_Location />
+      <Host/>
+      <Ratings />
+      <ThingsNearby />
+      <Camping_spots />
+      <Campers_also />
+      <Camp_safety />
+      <Safety_Partners />
+      <Footer />
+    </div></>
   )
 }
 
