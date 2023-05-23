@@ -10,7 +10,7 @@ const Ratings = () => {
     useEffect(() => {
         const fetchRatings = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/ratings");
+                const response = await fetch("http://localhost:5001/api/ratings");
                 if (response.ok) {
                     const data = await response.json();
                     setRatingsData(data);
@@ -59,7 +59,7 @@ const Ratings = () => {
                             />
                         ))}
                     </div>
-                    <div className="d-flex">
+                    <div className="d-flex pb-4">
                         <button className="show-more-btn" onClick={handleShowMore}>{visibleReviews === defaultReviewsAmount ? 'Show More' : 'Show Less'}</button>
                         {visibleReviews !== defaultReviewsAmount && (<button className="show-more-btn ms-2">
                             <a href="https://www.hipcamp.com/en-US/land/california-salmon-creek-ranch-4kk9hl90/reviews?shareid=7cjfmw8j3&adults=1&children=0&arrive=2023-05-17&depart=2023-05-20" target="_blank" rel="noopener noreferrer" className="no-underline">Show all 1092 reviews</a>
