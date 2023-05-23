@@ -1,5 +1,5 @@
 import React from 'react'
-'./Campsite_info.css'
+import './Campsite_info.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import bike from './assets/bike.png';
 import boat from './assets/boat.png';
@@ -37,7 +37,7 @@ const Campsite_info = () => {
   return (
     <div>
         <div className={`container | d-flex flex-row mb-3 mt-4`}>
-            <div className={`left-side | row alighn-items-center `}>
+            <div className={`left-side |`} style={{width:'60%'}}>
                 <div className={`left-side-header | d-flex flex-row mb-3`}>
                     <div className={`land-size | d-flex flex-column mb-3 pt-2`}>
                         <span className={`fs-3 fw-semibold`}> {land.acres} acres</span>
@@ -64,14 +64,14 @@ const Campsite_info = () => {
                 <div className='land-details '>
                     <span className='land-details1'> {land.description} </span>
                     <br />
-                    <button>{`Show more >`}</button>
+                    <a role='button' href="" className='text-dark fw-bold' data-bs-toggle='modal' data-bs-target='#descriptionModal'>{`Show more >`}</a>
                 </div>
             </div>
             
             <div className=''>
 
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6 pe-5">
                     <div className="fs-4 fw-semibold mb-4">Activity</div>
                     {land.activities.slice(0, 4).map((element, index) => (
                     <div className="d-flex gap-3 pb-3" key={index}>
@@ -79,9 +79,10 @@ const Campsite_info = () => {
                         {element}
                     </div>
                     ))}
+                    <a role='button' href="" className='text-dark fw-bold' data-bs-toggle='modal' data-bs-target='#activityModal'>{`Show more >`}</a>
                 </div>
 
-                <div className="col-md-1">
+                <div className="col-md-6 ps-5">
                     <div className="fs-4 fw-semibold mb-4 text-nowrap">Natural Features</div>
                     {land.naturalFeatures.slice(0, 4).map((element, index) => (
                     <div className="d-flex gap-3 pb-3 text-nowrap" key={index}>
@@ -89,36 +90,78 @@ const Campsite_info = () => {
                         {element}
                     </div>
                     ))}
+                    <a role='button' href="" className='text-dark fw-bold' data-bs-toggle='modal' data-bs-target='#featuresModal'>{`Show more >`}</a>
                 </div>
             </div>
 
             </div>
 
             
-            {/* <div className={`right-side | container grid row `}>
-                <div className={`Activities | row`}>
-                        <span className={`fs-2 fw-semibold `}>Activities</span>
+            {/*Modal*/}
+
+            <div className='modal fade' id='descriptionModal' tabIndex={-1} aria-labelledby='modalLabel' aria-hidden="true">
+                <div className="modal-dialog d-flex">
+                    <div className="modal-content p-5 rounded-5">
+                    <div className="modal-header">
+                        <div>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 className="modal-title fs-5 pt-3 fw-bold" id="modalLabel">About</h1>
+                        </div>
                         
-                        <img src={bike} alt="" srcset="" style={{
-                            width : "30px", 
-                            height: "30px"
-                        }}/>
-                        <span className={`fs-4 col`}>{land.activities.splice(0,4)}</span>
-                        
-                    
-                    
-                </div>
-                <div className={`Natural-features | row`}>
-                    <div>
-                        <span className={`fs-2 fw-semibold `}>Natural Features</span>
-                      
-                        <span>{land.naturalFeatures.splice(0,4)}</span>
                     </div>
-
+                    <div className="modal-body">
+                        {land.description}
+                    </div>
+                    </div>
+                </div>
                 </div>
 
-    
-            </div> */}
+                <div className='modal fade' id='activityModal' tabIndex={-1} aria-labelledby='modalLabel' aria-hidden="true">
+                <div className="modal-dialog d-flex" style={{width:'600px'}}>
+                    <div className="modal-content p-3 rounded-5">
+                    <div className="modal-header">
+                        <div>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 className="modal-title fs-4 pt-3 fw-bold" id="modalLabel">Activities</h1>
+                        <h3 className='text-secondary fs-5'>On the land or nearby</h3>
+                        </div>
+                        
+                    </div>
+                    <div className="modal-body">
+                    {land.activities.map((element, index) => (
+                    <div className="d-flex gap-3 pb-3" key={index}>
+                        <img src={land.activitiesImg[index]} style={{ height: '25px', width: '25px' }} alt={element} />
+                        {element}
+                    </div>
+                    ))}
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <div className='modal fade' id='featuresModal' tabIndex={-1} aria-labelledby='modalLabel' aria-hidden="true">
+                <div className="modal-dialog d-flex" style={{width:'600px'}}>
+                    <div className="modal-content p-3 rounded-5">
+                    <div className="modal-header">
+                        <div>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 className="modal-title fs-4 pt-3 fw-bold" id="modalLabel">Natural features</h1>
+                        <h3 className='text-secondary fs-5'>On the land or nearby</h3>
+                        </div>
+                        
+                    </div>
+                    <div className="modal-body">
+                    {land.naturalFeatures.slice(0, 4).map((element, index) => (
+                    <div className="d-flex gap-3 pb-3 text-nowrap" key={index}>
+                        <img src={land.naturalFeaturesImg[index]} style={{ height: '25px', width: '25px' }} alt={element} />
+                        {element}
+                    </div>
+                    ))}
+                    </div>
+                    </div>
+                </div>
+                </div>
+           
         </div>
     </div>
   )
