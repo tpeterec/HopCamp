@@ -80,6 +80,13 @@ app.get("/api/photogallery", (req, res) => {
     })
 });
 
+app.get('/api/api-key', function(req, res) {
+        (process.env.GOOGLE_MAPS_API_KEY, function(err, response) {
+        console.log(err ? err : response)
+        res.text(response)
+    })
+});
+
 app.listen(port,()=>{
     console.log('Listening to port ' + port);
 })
