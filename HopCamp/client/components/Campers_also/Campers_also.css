@@ -1,9 +1,9 @@
-.camp-spots-root-container {
+.camp-also-root-container {
     display: flex;
     width: 100vw;
     justify-content: center;
 }
-.camp-spots-container-centered {
+.camp-also-container-centered {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -20,7 +20,7 @@
     /* border: 1px solid lightgray; */
 }
 
-.camp-spots-title {
+.camp-also-title {
     width: 100%;
     font-size: 28px;
     font-weight: 600;
@@ -31,7 +31,7 @@
 
 }
 
-.camp-spot-card {
+.camp-also-card {
     display: flex;
     flex-direction: column;
     width: 308px;
@@ -42,19 +42,19 @@
     /* border: 1px solid lightgray; */
 }
 
-.camp-spot-img-wrapper {
+.camp-also-img-wrapper {
     width: 292px;
     height: 219px;
     border-radius: 16px;
     overflow: hidden;
 }
 
-.camp-spot-img {
+.camp-also-img {
     width: auto;
     height: 100%;
 }
 
-.camp-spot-rating-container {
+.camp-also-rating-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -62,11 +62,11 @@
     /* border: 1px solid lightgray; */
 }
 
-.camp-spot-rating-thumb {
+.camp-also-rating-thumb {
     fill: rgb(92, 90, 77)
 }
 
-.camp-spot-rating-txt {
+.camp-also-rating-txt {
     font-family: Calibre, Helvetica, Arial, sans-serif;
     color: rgb(92, 90, 77);
     font-size: 18px;
@@ -75,7 +75,7 @@
     line-height: 24px;
 }
 
-.camp-spot-title-txt {
+.camp-also-title-txt {
     font-family: Calibre, Helvetica, Arial, sans-serif;
     color: rgb(51, 49, 33);
     font-size: 20px;
@@ -84,7 +84,7 @@
     line-height: 26px;
 }
 
-.camp-spot-txt {
+.camp-also-txt {
     font-family: Calibre, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -93,7 +93,7 @@
     color: rgb(110, 110, 110);
 }
 
-.camp-spot-money-txt {
+.camp-also-money-txt {
     font-family: Calibre, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 600;

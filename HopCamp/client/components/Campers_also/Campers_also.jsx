@@ -1,40 +1,40 @@
 import { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import "./Camping_spots.css";
+import "./Campers_also.css";
 
-const Camping_spots = () => {
+const Campers_also = () => {
     
   return (
     <>
-      <div className="camp-spots-root-container">
-        <div className="camp-spots-container-centered">
+      <div className="camp-also-root-container">
+        <div className="camp-also-container-centered">
           <div className="d-flex w-100">
-            <span className="camp-spots-title">
-              More camping spots nearby
+            <span className="camp-also-title">
+                Campers also viewed...
             </span>
           </div>
-          <CampingSportsCarousel />
+          <CampersAlsoCarousel />
         </div>
       </div>
     </>
   );
 };
 
-const CampingSportsCarousel = () => {
+const CampersAlsoCarousel = () => {
   const [index, setIndex] = useState(0);
-  const [campingSpotsData, setCampingSpotsData] = useState([]);
+  const [campersAlsoData, setCampersAlsoData] = useState([]);
   
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
 
   useEffect(() => {
-      const fetchCampingSpots = async () => {
+      const fetchCampersAlso = async () => {
           try {
-              const response = await fetch("http://localhost:5001/api/camping-spots");
+              const response = await fetch("http://localhost:5001/api/campers-also");
               if (response.ok) {
                   const data = await response.json();
-                  setCampingSpotsData(data);
+                  setCampersAlsoData(data);
               } else {
                   throw new Error("Request failed");
               }
@@ -42,12 +42,12 @@ const CampingSportsCarousel = () => {
               console.error(err);
           }
       };
-      fetchCampingSpots();
+      fetchCampersAlso();
   }, []);
 
-  const groupedCampingSpots = campingSpotsData.reduce((accumulator, current, index) => {
+  const groupedCampersAlso = campersAlsoData.reduce((accumulator, current, index) => {
     if (index % 4 === 0) {
-      accumulator.push(campingSpotsData.slice(index, index + 4));
+      accumulator.push(campersAlsoData.slice(index, index + 4));
     }
     return accumulator;
   }, []);
@@ -62,20 +62,20 @@ const CampingSportsCarousel = () => {
         prevIcon={<span className="carousel-custom-prev-icon">&lt;</span>}
         nextIcon={<span className="carousel-custom-next-icon">&gt;</span>}
       >
-      {groupedCampingSpots.map((campingSpotGroup, groupIndex) => (
+      {groupedCampersAlso.map((camperAlsoGroup, groupIndex) => (
         <Carousel.Item key={groupIndex}>
           <div className="d-flex">
-            {campingSpotGroup.map((campingSpotData) => 
-              <CampingSpotCard 
-                key={campingSpotData.id}
-                descr={campingSpotData.description}
-                pic_url={campingSpotData.pic_url}
-                description={campingSpotData.description}
-                rating={campingSpotData.rating}
-                numOfRating={campingSpotData.num_of_ratings}
-                acres={campingSpotData.acres}
-                location={campingSpotData.location}
-                price={campingSpotData.price}
+            {camperAlsoGroup.map((camperAlsoData) => 
+              <CamperAlsoCard 
+                key={camperAlsoData.id}
+                descr={camperAlsoData.description}
+                pic_url={camperAlsoData.pic_url}
+                description={camperAlsoData.description}
+                rating={camperAlsoData.rating}
+                numOfRating={camperAlsoData.num_of_ratings}
+                acres={camperAlsoData.acres}
+                location={camperAlsoData.location}
+                price={camperAlsoData.price}
               />            
             )}
           </div>
@@ -86,7 +86,7 @@ const CampingSportsCarousel = () => {
   );
 };
 
-const CampingSpotCard = (props) => {
+const CamperAlsoCard = (props) => {
 
   return (
     <div className="camp-spot-card">
@@ -130,4 +130,4 @@ const CampingSpotCard = (props) => {
   );
 }
 
-export default Camping_spots;
+export default Campers_also;

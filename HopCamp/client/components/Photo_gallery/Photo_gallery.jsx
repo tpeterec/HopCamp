@@ -13,7 +13,7 @@ function PhotoGallery() {
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/photogallery/");
+        const response = await fetch("http://localhost:5001/api/photogallery/");
         if (response.ok) {
           const data = await response.json();
           setPhotoGallery(data);
@@ -41,15 +41,14 @@ function PhotoGallery() {
 
 
   return (
-    <div className="container p-0" style={{ maxWidth: '100vw' }}>
-    <div className="display">
+    <div className="galley-root-container">
       {photoGallery.length === 0 ? (
         <div>Loading...</div>
       ) : (
         <>
-          <div className="d-flex" style={{maxHeight:'500px', gap:'5px'}}>
+          <div className="d-flex" style={{maxHeight:'400px', gap:'5px'}}>
               <div overflow="hidden">
-                <div className="photo-gallery-left" style={{height:'100%'}}>
+                <div className="photo-gallery-left">
                     <button className="photo-gallery-button" onClick={() => openModal(photoGallery[0])}  style={{height:'100%'}}>
                       <img
                         alt=""
@@ -57,16 +56,14 @@ function PhotoGallery() {
                         decoding="async"
                         data-nimg="fill"
                         className="photo-gallery-img"
-                        style={{height:'100%', borderRadius:"10px 0px 0px 10px"}}
                       />
                     </button>
                 </div>
               </div>
            
 
-              <div className="photo-gallery-square" style={{ maxWidth: '50vw'}}>
-                
-                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center'}}>
+              <div className="photo-gallery-square">           
+                    <div className="photo-gallery-item">
                       <button className="photo-gallery-button" onClick={() => openModal(photoGallery[2])} style={{height:'100%'}}>
                         <img
                           alt=""
@@ -78,7 +75,7 @@ function PhotoGallery() {
                         />
                       </button>
                     </div>
-                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'left' }}>
                       <button className="photo-gallery-button" onClick={() => openModal(photoGallery[4])} style={{height:'100%'}}> 
                         <img
                           alt=""
@@ -93,7 +90,7 @@ function PhotoGallery() {
                     </div>
                 
                 
-                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center'}}>
+                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'left'}}>
                       <button className="photo-gallery-button" onClick={() => openModal(photoGallery[6])} style={{height:'100%'}}>
                         <img
                           alt=""
@@ -105,7 +102,7 @@ function PhotoGallery() {
                         />
                       </button>
                     </div>
-                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'center' } }>
+                    <div className="photo-gallery-item" style={{ display: 'flex', justifyContent: 'left' } }>
                       <button className="photo-gallery-button" onClick={() => openModal(photoGallery[8]) } style={{height:'100%'}}>
                         <img
                           alt=""
@@ -145,7 +142,6 @@ function PhotoGallery() {
         </>
       )}
     </div>
-  </div>
   );
 }
 

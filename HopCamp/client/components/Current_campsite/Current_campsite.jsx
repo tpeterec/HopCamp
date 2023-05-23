@@ -1,8 +1,8 @@
 import styles from "./Current_campsite.module.css";
+import ShareComponent from './ShareComponent';
 import {useEffect, useState} from 'react'
 function Current_campsite() {
   //const [reviewCount,setReviewCount] = useState(0);
-
   return (
     <div className={styles.currentCampSite}>
       <nav className={`${styles.navState} fw-bolder`} aria-label="breadcrumb">
@@ -46,25 +46,35 @@ function Current_campsite() {
           >
             See available sites
           </a></button>
-         
-          <button
-            className={`p-2 ps-4 pe-4 fw-semibold rounded-3 ${styles.btNormal}`}
-          >
-            <svg
-              className="me-2"
-              width="24px"
-              height="24px"
-              xmlns="http://www.w3.org/2000/svg"
+
+          <div className="btn-group">
+            <button
+              className={`p-2 ps-4 pe-4 fw-semibold rounded-3 dropdown ${styles.btNormal}`}
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
-              <path
-                d="M7.05429 8.99995C6.66377 8.60942 6.66377 7.97626 7.05429 7.58573L11.2969 3.34309L12.004 2.63599L12.7111 3.34309L16.9538 7.58573C17.3443 7.97626 17.3443 8.60942 16.9538 8.99995C16.5633 9.39047 15.9301 9.39047 15.5396 8.99995L13.0039 6.4643L13.0039 13.9497C13.0039 14.502 12.5562 14.9497 12.0039 14.9497C11.4516 14.9497 11.0039 14.502 11.0039 13.9497L11.0039 6.46453L8.46851 8.99995C8.07798 9.39047 7.44482 9.39047 7.05429 8.99995ZM5 13V18H19V13C19 12.4477 19.4477 12 20 12C20.5523 12 21 12.4477 21 13V19C21 19.0345 20.9983 19.0686 20.9948 19.1023C20.9436 19.6065 20.5178 20 20 20C19.9993 20 19.9987 20 19.998 20H4.00197H4C3.49026 20 3.0696 19.6186 3.00781 19.1256C3.00527 19.1053 3.00334 19.0849 3.00203 19.0642C3.00068 19.043 3 19.0216 3 19V13C3 12.4477 3.44772 12 4 12C4.55228 12 5 12.4477 5 13Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-            Share
-          </button>
+              <svg
+                className="me-2"
+                width="24px"
+                height="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.05429 8.99995C6.66377 8.60942 6.66377 7.97626 7.05429 7.58573L11.2969 3.34309L12.004 2.63599L12.7111 3.34309L16.9538 7.58573C17.3443 7.97626 17.3443 8.60942 16.9538 8.99995C16.5633 9.39047 15.9301 9.39047 15.5396 8.99995L13.0039 6.4643L13.0039 13.9497C13.0039 14.502 12.5562 14.9497 12.0039 14.9497C11.4516 14.9497 11.0039 14.502 11.0039 13.9497L11.0039 6.46453L8.46851 8.99995C8.07798 9.39047 7.44482 9.39047 7.05429 8.99995ZM5 13V18H19V13C19 12.4477 19.4477 12 20 12C20.5523 12 21 12.4477 21 13V19C21 19.0345 20.9983 19.0686 20.9948 19.1023C20.9436 19.6065 20.5178 20 20 20C19.9993 20 19.9987 20 19.998 20H4.00197H4C3.49026 20 3.0696 19.6186 3.00781 19.1256C3.00527 19.1053 3.00334 19.0849 3.00203 19.0642C3.00068 19.043 3 19.0216 3 19V13C3 12.4477 3.44772 12 4 12C4.55228 12 5 12.4477 5 13Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              Share
+            </button>
+            <div className="shadow dropdown-menu text-center rounded-3 mt-2 p-4" style={{width:'550px'}} id='dropdown-Share'>
+              <ShareComponent />
+            </div>
+            
+          </div>
           <button
-            className={`p-2 ps-4 pe-4 fw-bold rounded-3 ${styles.btNormal}`} onClick={()=>setModal(true)}
+            className={`p-2 ps-4 pe-4 fw-bold rounded-3 ${styles.btNormal}`}
+            data-bs-toggle='modal'
+            data-bs-target='#saveModal'
           >
             <svg
               className="me-2"
@@ -84,7 +94,33 @@ function Current_campsite() {
       
       
       {/*modal*/}
-      
+      <div className="modal fade" id='saveModal' tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog">
+    <div className="modal-content p-3">
+      <div className="modal-header">
+        <div className="pb-4">
+          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 className="modal-title fs-3 pt-3" id="exampleModalLabel">Save to list</h1>
+        </div>
+        
+        
+      </div>
+      <div className="modal-body">
+        <div>
+          <div className="d-flex align-items-center gap-3">
+          <img className="border border-dark p-3" src='https://static.vecteezy.com/system/resources/previews/000/376/259/original/plus-vector-icon.jpg'></img>
+              <h5 className="fw-bold">Create new list</h5>
+          </div>
+          <div className="d-flex align-items-center gap-3 pt-4">
+          <img className="border border-dark p-3" src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png'></img>
+              <h5 className="fw-bold">Favorites</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     </div>
 

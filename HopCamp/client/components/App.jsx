@@ -15,12 +15,13 @@ import Campsite_info from './Campsite_info/Campsite_info';
 import Safety_Partners from './Safety_Partners/Safety_Partners.jsx';
 import ThingsNearby from './Things_Nearby/ThingsNearby.jsx';
 import Tent_Site_Map from './Tent_site/Tent_site_map';
+import Campers_also from './Campers_also/Campers_also';
+import Footer from './Footer/Footer'
 
 function App() {
     const popupCalenderEl = useRef(null);
     const handleClick = (event) => {
         const popUpCalender = popupCalenderEl.current;
-        console.log(popUpCalender);
         if (popUpCalender && !popUpCalender.contains(event.target))
             if (popUpCalender.classList.contains("show"))
                 popUpCalender.classList.toggle("show");
@@ -42,17 +43,12 @@ function App() {
     // })
   return (
     <>
-      <div>
-        <Header />
-      </div>
-      <div id='contentWrapper' onClick={handleClick}>
+      <Header />
+      <div className='contentWrapper' onClick={handleClick}>
       <Current_campsite />
-      <h1> ^ Current Campsite^ (Genglin)</h1>
-      <h1>Photo Gallery (Dennis) </h1>
       <Photo_gallery />
-      {/* <h1>Camp Info (Chris)</h1> */}
       <Campsite_info />
-      <Available_sites />
+      <Available_sites popupCalenderEl={popupCalenderEl}/>
       <div className={`tentsites-map-container | container text-center`}>
         <div className='row align-items-start'>
           <div className={`tentsites-left| col`}>
@@ -76,7 +72,16 @@ function App() {
         <Safety_Partners />
       
       <h1>Footer (Chris)</h1>
-    </div></>
+      <Ratings />
+      <ThingsNearby />
+      <Camping_spots />
+      <Campers_also />
+      <Camp_safety />
+      <Safety_Partners />
+      <Footer />
+    </div>
+  </div>
+</>
   )
 }
 

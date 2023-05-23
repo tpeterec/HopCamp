@@ -1,6 +1,5 @@
 .rating-root-container {
     display: flex;
-    width: 100vw;
     justify-content: center;
 }
 .rating-container-centered {
@@ -13,6 +12,7 @@
     align-items: center;
     box-sizing: border-box;
     margin: 0;
+    padding-top: 48px;
     /* border: 1px solid lightgray; */
 }
 

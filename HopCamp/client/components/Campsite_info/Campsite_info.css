@@ -1,1 +1,15 @@
 /* Comment test -- Chris */
+
+.land-sites {
+    margin-left: 3rem;
+    border-left: 10px blue;
+    border: solid 10px black;
+
+}
+.left-border {
+border-left: 10px black;
+}
+
+.left-details {
+    width: 50%;
+}

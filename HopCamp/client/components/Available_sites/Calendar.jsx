@@ -12,8 +12,8 @@ function Calendar(props){
     
     return (
         <div className="collapse " id="categoryList" ref={props.popupCalenderEl}>
-        <div className={`${styles.cardElement} shadow border-0 position-absolute ps-2 pe-2 card-body d-inline-block`} style={{minHeight:'450px', width:'50%',zIndex: 1}}>
-                <div className={`${styles.cardElement} card-body m-0`} style={{minHeight:'350px'}}>
+        <div className={`${styles.cardElement} shadow border-0 position-absolute card-body d-inline-block p-5`} style={{minHeight:'450px', width:'50%',zIndex: 1}}>
+                <div className={`${styles.cardElement} card-body border pb-3`} style={{minHeight:'300px'}}>
                   <div id="wrapper" className="d-flex text-center">
                     <div className={styles.tableContainer}>
                       <div className="d-flex justify-content-center">

@@ -1,6 +1,5 @@
 .safety-partners-component-container {
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
     background-color:#f1f3ee;
     margin-left: 0px;
     margin-right: 0px;
@@ -18,19 +17,19 @@
 }
 
 .safety-partners-card-container{
-    height: 80vh;
-    width: 100wh;
+    /* height: 80vh; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 48px;
 }
 
 .safety-partner-card{
     background-color: #e6efd9;
     color: #28400c;
-    height:480px;
-    width: 389px;
+    height:510px;
     margin: 12px;
+    padding-bottom: 40px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -41,14 +40,14 @@
     margin-top: 20px;
     margin-left: 30px;
     margin-right: 30px;
-    height: 100vh;
-    width: 100wh;
+    /* height: 100vh; */
+    /* width: 100wh; */
     /* background-color: red; */
 }
 
 .safety-partner-card-image{
-    height: 50vh;
-    width: 50wh;
+    /* height: 260px; */
+    width: 330px;
     z-index: 1;
     /* visibility: hidden; */
 }
@@ -60,7 +59,6 @@
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 62px;
     border: 1px solid black;
     border-radius: 24px;
     width: 350px;

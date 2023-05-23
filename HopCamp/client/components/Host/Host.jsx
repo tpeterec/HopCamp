@@ -23,28 +23,31 @@ function Host() {
   };
 
   return (
-    <div className="host-info-container">
-      <div style={{paddingTop: '40px',
+    <div className="host-info-root-container">
+      {/* <div style={{paddingTop: '40px',
     paddingBottom: '40px',
-    }}>
-        <div className="container-container">
-        <div className="host-pic">
-          <img
-            alt="Avatar"
-            src="https://hipcamp-res.cloudinary.com/image/upload/c_fill,f_auto,h_80,w_80/v1475217800/profile/pdmfuoeafxiturx4dgrz.jpg"
-            className="img-circle"
-          />
+    }}> */}
+        <div className="host-info-container-centered">
+        <div className="d-flex flex-column">
+          <div className="d-flex mb-2">
+            <div className="host-pic">
+              <img
+                alt="Avatar"
+                src="https://hipcamp-res.cloudinary.com/image/upload/c_fill,f_auto,h_80,w_80/v1475217800/profile/pdmfuoeafxiturx4dgrz.jpg"
+                className="img-circle"
+              />
+            </div>
+            <div className="host-info">
+              <div className="hosted-by">Hosted by John & Lesley B.</div>
+              <div className="since">Joined in October 2015</div>
+            </div>
+          </div>
+          <button className="contact-button btn btn-outline-dark" onClick={handleButtonClick}>
+              Contact host
+          </button>
         </div>
-        <div className="host-info">
-          <div className="hosted-by">Hosted by John & Lesley B.</div>
-          <div className="since">Joined in October 2015</div>
-          
         </div>
-        </div>
-        <button className="contact-button btn btn-outline-dark" onClick={handleButtonClick}>
-            Contact host
-        </button>
-      </div>
+      {/* </div> */}
       
 
       {/*modal*/}

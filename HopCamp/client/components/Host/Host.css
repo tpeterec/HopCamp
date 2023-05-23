@@ -1,18 +1,27 @@
-.host-info-container {
-    position: relative;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgb(0, 0, 0, 0.5);
-    width: 70vw;
+.host-info-root-container {
+    display: flex;
+    width: 100vw;
+    
+    /* position: relative;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    width: 70vw; */
 }
   
-.container-container {
+.host-info-container-centered {
     display: flex;
-    /* align-items: flex-start; */
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
     max-width: 1280px;
     min-width: 550px;
+    align-items: center;
     box-sizing: border-box;
-    padding-bottom: 20px;
+    margin: 0;
+    padding-bottom: 48px;
+    padding-top: 48px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
 }
   
 .host-info {
@@ -21,7 +30,6 @@
     flex-direction: column;
 }
   
-
 .img-circle {
     border-radius: 50%;
     width: 44px;
