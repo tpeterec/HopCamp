@@ -1,5 +1,6 @@
 .rating-root-container {
     display: flex;
+    width: 100vw;
     justify-content: center;
 }
 .rating-container-centered {
