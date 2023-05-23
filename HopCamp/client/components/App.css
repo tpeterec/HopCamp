@@ -5,11 +5,12 @@ body {
   overflow: unset;
   padding-right: unset;
 }
-#contentWrapper{
+.contentWrapper{
   width: 100%;
   display: block;
   padding-left: 150px;
   padding-right: 150px;
+  
 }
 /* #root {
   max-width: 1280px;
