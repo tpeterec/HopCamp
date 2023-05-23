@@ -45,31 +45,34 @@ function App() {
   return (
     <>
       <Header />
-      <div id='contentWrapper' onClick={handleClick}>
-      <Current_campsite />
-      <Photo_gallery />
-      <Campsite_info />
-      <Available_sites />
-      <div className={`tentsites-map-container | container text-center`}>
-        <div className='row align-items-start'>
-          <div className={`tentsites-left| col`}>
-            <Tent_site />
-          </div>
-          <div className={`map-right | col `}>
-            <Tent_Site_Map className= {``}/>  
+      <div className='contentWrapper' onClick={handleClick}>
+        <Current_campsite />
+        <Photo_gallery />
+        <Campsite_info />
+        <Available_sites />
+        <div className={`tentsites-map-container | container text-center`}>
+          <div className='row align-items-start'>
+            <div className={`tentsites-left| col`}>
+              <Tent_site />
+            </div>
+            <div className={`map-right | col `}>
+              <Tent_Site_Map className= {``}/>  
+            </div>
           </div>
         </div>
+        <Camping_Location />
+        <Host/>
       </div>
-      <Camping_Location />
-      <Host/>
-      <Ratings />
-      <ThingsNearby />
-      <Camping_spots />
-      <Campers_also />
-      <Camp_safety />
-      <Safety_Partners />
-      <Footer />
-    </div></>
+        <Ratings />
+        {/* <ThingsNearby /> */}
+        <Camping_spots />
+        <Campers_also />
+      <div className='contentWrapper'>
+        <Camp_safety />
+        <Safety_Partners />
+        <Footer />
+      </div>
+    </>
   )
 }
 
