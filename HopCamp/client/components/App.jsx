@@ -61,6 +61,17 @@ function App() {
       </div>
       <Camping_Location />
       <Host/>
+      <div>
+        <Ratings />
+      </div>
+      <h1>Things To Do Nearby (Dan)</h1>
+      <ThingsNearby />
+      <div>
+        <Camping_spots />
+        <Camp_safety/>
+        <Safety_Partners />
+      
+      <h1>Footer (Chris)</h1>
       <Ratings />
       <ThingsNearby />
       <Camping_spots />
@@ -68,7 +79,9 @@ function App() {
       <Camp_safety />
       <Safety_Partners />
       <Footer />
-    </div></>
+    </div>
+  </div>
+</>
   )
 }
 

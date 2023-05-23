@@ -1,52 +1,111 @@
-import React from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel, Card, Button } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import Carousel from "react-bootstrap/Carousel";
 import "./ThingsNearby.css";
-import BodegaHead from "./assets/Bodega Head.jpg"
 
 const ThingsNearby = () => {
-    const nearbyActivities = [
-      {
-        id: 1,
-        title: 'Bodega Head',
-        distance: '4 miles away',
-        image: BodegaHead,
-      },
-      {
-        id: 2,
-        title: 'Armstrong Redwoods State Natural Reserve',
-        distance: '12 miles away',
-        image: './assets/Armstrong Redwoods State Natural Reserve.jpg',
-      },
-      // Add more activities...
-    ];
-
-    const breakpoints = [
-        {width: 1, nearbyActivities:1},
-        {width: 550, nearbyActivities:2},
-        {width: 768, nearbyActivities:3},
-        {width: 1200, nearbyActivities:4},
-    ];
-  
-    return (
-        <>
-            <h1 className="Title">Things To Do Nearby</h1>
-            <Carousel breakpoints={breakpoints} classname="carousel">
-                {nearbyActivities.map((activity, index) => (
-                    <Carousel.Item key={index}>
-                        <Card className="card">
-                            <Card.Img variant="top" className="card-image" src={activity.image} alt={activity.title} />
-                            <Card.Body>
-                                <Card.Title>{activity.title}</Card.Title>
-                                <Card.Text>{activity.distance}</Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Carousel.Item>
-                ))}
-            </Carousel>
-        </>
-    );
+    
+  return (
+    <>
+      <div className="camp-spots-root-container">
+        <div className="camp-spots-container-centered">
+          <div className="d-flex w-100">
+            <span className="camp-spots-title">
+              Things To Do Nearby
+            </span>
+          </div>
+          <CapmpingSportsCarousel />
+        </div>
+      </div>
+    </>
+  );
 };
+
+const CapmpingSportsCarousel = () => {
+  const [index, setIndex] = useState(0);
+  const [thingsNearbyData, setThingsNearbyData] = useState([]);
   
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
+  useEffect(() => {
+      const fetchNearbyPlaces = async () => {
+          try {
+              const response = await fetch("http://localhost:5001/api/things-nearby");
+              if (response.ok) {
+                  const data = await response.json();
+                  setThingsNearbyData(data);
+              } else {
+                  throw new Error("Request failed");
+              }
+          } catch (err) {
+              console.error(err);
+          }
+      };
+      fetchNearbyPlaces();
+  }, []);
+
+  const groupedPlaces = thingsNearbyData.reduce((accumulator, current, index) => {
+    if (index % 4 === 0) {
+      accumulator.push(thingsNearbyData.slice(index, index + 4));
+    }
+    return accumulator;
+  }, []);
+
+  return (
+    <>
+      <Carousel
+        activeIndex={index}
+        onSelect={handleSelect}
+        interval={null}
+        indicators={false}
+        prevIcon={<span className="carousel-custom-prev-icon">&lt;</span>}
+        nextIcon={<span className="carousel-custom-next-icon">&gt;</span>}
+      >
+      {groupedPlaces.map((placesGroup, groupIndex) => (
+        <Carousel.Item key={groupIndex}>
+          <div className="d-flex">
+            {placesGroup.map((thingsNearbyData) => 
+              <CampingSpotCard 
+                key={thingsNearbyData.id}
+                pic_url={thingsNearbyData.img}
+                description={thingsNearbyData.title}
+                location={thingsNearbyData.distance}
+              />            
+            )}
+          </div>
+        </Carousel.Item>
+      ))}
+    </Carousel>
+    </>
+  );
+};
+
+const CampingSpotCard = (props) => {
+
+  return (
+    <div className="camp-spot-card">
+      <div className="camp-spot-img-wrapper">
+        <img className="camp-spot-img" src={props.pic_url}></img>
+      </div>
+      <div className="camp-spot-rating-container">
+        <div className="d-flex align-items-baseline">
+          <span className="camp-spot-rating-txt ps-1 pt-2">
+          </span>
+        </div>
+        <span className="camp-spot-title-txt mt-2">
+          {props.description}
+        </span>
+        <span className="camp-spot-txt pt-1">
+          {props.location}
+        </span>
+        <div className="pt-1">
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default ThingsNearby;
+
+// Recommiting

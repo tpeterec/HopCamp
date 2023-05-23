@@ -92,6 +92,13 @@ pool
     });
 });
 
+  app.get('/api/things-nearby', function(req, res) {
+    pool.query(`SELECT * FROM things_nearby`, function(err, response) {
+        console.log(err ? err : response.rows)
+        res.json(response.rows)
+    })
+});
+
 app.listen(port,()=>{
     console.log('Listening to port ' + port);
 })
