@@ -66,10 +66,8 @@ function App() {
       <Camping_spots />
       <Campers_also />
       <h1>Things To Do Nearby (Dan)</h1>
-        <Camping_spots />
-        <Camp_safety/>
-        <Safety_Partners />
-      
+      <Camp_safety />
+      <Safety_Partners />
       <h1>Footer (Chris)</h1>
     </div></>
   )
