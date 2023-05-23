@@ -1,7 +1,6 @@
 .host-info-root-container {
     display: flex;
     width: 100vw;
-    justify-content: center;
     
     /* position: relative;
     border-top: 1px solid #dbdbdb;

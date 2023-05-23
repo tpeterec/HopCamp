@@ -68,7 +68,7 @@ function App() {
       <Campers_also />
       <Camp_safety />
       <Safety_Partners />
-      <h1>Footer (Chris)</h1>
+      <Footer />
     </div></>
   )
 }
