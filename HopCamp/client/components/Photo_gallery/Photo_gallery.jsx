@@ -13,7 +13,7 @@ function PhotoGallery() {
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/photogallery/");
+        const response = await fetch("http://localhost:5001/api/photogallery/");
         if (response.ok) {
           const data = await response.json();
           setPhotoGallery(data);
