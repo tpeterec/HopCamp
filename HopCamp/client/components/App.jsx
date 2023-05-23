@@ -15,6 +15,7 @@ import Campsite_info from './Campsite_info/Campsite_info';
 import Safety_Partners from './Safety_Partners/Safety_Partners.jsx';
 import ThingsNearby from './Things_Nearby/ThingsNearby.jsx';
 import Tent_Site_Map from './Tent_site/Tent_site_map';
+import Campers_also from './Campers_also/Campers_also';
 
 function App() {
     const popupCalenderEl = useRef(null);
@@ -42,15 +43,10 @@ function App() {
     // })
   return (
     <>
-      <div>
-        <Header />
-      </div>
+      <Header />
       <div id='contentWrapper' onClick={handleClick}>
       <Current_campsite />
-      <h1> ^ Current Campsite^ (Genglin)</h1>
-      <h1>Photo Gallery (Dennis) </h1>
       <Photo_gallery />
-      {/* <h1>Camp Info (Chris)</h1> */}
       <Campsite_info />
       <Available_sites />
       <div className={`tentsites-map-container | container text-center`}>
@@ -65,14 +61,12 @@ function App() {
       </div>
       <Camping_Location />
       <Host/>
-      <div>
-        <Ratings />
-      </div>
+      <Ratings />
+      <Camping_spots />
+      <Campers_also />
       <h1>Things To Do Nearby (Dan)</h1>
-        <Camping_spots />
-        <Camp_safety/>
-        <Safety_Partners />
-      
+      <Camp_safety />
+      <Safety_Partners />
       <h1>Footer (Chris)</h1>
     </div></>
   )
