@@ -60,13 +60,6 @@ function App() {
         </div>
         <Camping_Location />
         <Host />
-        <div>
-          <Ratings />
-        </div>
-        <ThingsNearby />
-        <Camping_spots />
-        <Camp_safety />
-        <Safety_Partners />
         <Ratings />
         <ThingsNearby />
         <Camping_spots />
