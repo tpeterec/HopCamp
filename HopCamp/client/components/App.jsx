@@ -63,9 +63,9 @@ function App() {
       <Camping_Location />
       <Host/>
       <Ratings />
+      <ThingsNearby />
       <Camping_spots />
       <Campers_also />
-      <h1>Things To Do Nearby (Dan)</h1>
       <Camp_safety />
       <Safety_Partners />
       <h1>Footer (Chris)</h1>
