@@ -1,6 +1,5 @@
 .safety-partners-component-container {
     height: 100vh;
-    width: 100vw;
     background-color:#f1f3ee;
     margin-left: 0px;
     margin-right: 0px;
@@ -19,7 +18,6 @@
 
 .safety-partners-card-container{
     height: 80vh;
-    width: 100wh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,7 +27,6 @@
     background-color: #e6efd9;
     color: #28400c;
     height:480px;
-    width: 389px;
     margin: 12px;
     border-radius: 10px;
     display: flex;
@@ -60,7 +57,6 @@
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 62px;
     border: 1px solid black;
     border-radius: 24px;
     width: 350px;

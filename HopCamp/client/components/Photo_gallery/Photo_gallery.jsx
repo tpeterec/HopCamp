@@ -47,7 +47,7 @@ function PhotoGallery() {
         <div>Loading...</div>
       ) : (
         <>
-          <div className="d-flex" style={{maxHeight:'500px', gap:'5px'}}>
+          <div className="d-flex" style={{maxHeight:'400px', gap:'5px'}}>
               <div overflow="hidden">
                 <div className="photo-gallery-left" style={{height:'100%'}}>
                     <button className="photo-gallery-button" onClick={() => openModal(photoGallery[0])}  style={{height:'100%'}}>
