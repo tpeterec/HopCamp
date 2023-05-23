@@ -15,6 +15,7 @@ import Campsite_info from './Campsite_info/Campsite_info';
 import Safety_Partners from './Safety_Partners/Safety_Partners.jsx';
 import ThingsNearby from './Things_Nearby/ThingsNearby.jsx';
 import Tent_Site_Map from './Tent_site/Tent_site_map';
+import Footer from './Footer/Footer'
 
 function App() {
     const popupCalenderEl = useRef(null);
@@ -73,7 +74,7 @@ function App() {
         <Camp_safety/>
         <Safety_Partners />
       
-      <h1>Footer (Chris)</h1>
+        <Footer />
     </div></>
   )
 }
