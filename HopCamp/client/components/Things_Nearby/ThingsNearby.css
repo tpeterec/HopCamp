@@ -10,17 +10,9 @@
   .nearby-activities-carousel .carousel-item .card {
     width: 25vw;
   } */
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    width: 100%;
-    background-color: aqua;
-    color: black;
-    margin: 0 15px;
-    font-size: 4em;
-}
+  .camp-spots-root-container{
+    width:auto;
+  }
 
 .card-image {
     height: 288px;
