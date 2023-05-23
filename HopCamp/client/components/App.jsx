@@ -44,7 +44,7 @@ function App() {
   return (
     <>
       <Header />
-      <div id='contentWrapper' onClick={handleClick}>
+      <div className='contentWrapper' onClick={handleClick}>
       <Current_campsite />
       <Photo_gallery />
       <Campsite_info />
