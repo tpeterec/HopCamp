@@ -13,14 +13,14 @@ const Camping_spots = () => {
               More camping spots nearby
             </span>
           </div>
-          <CapmpingSportsCarousel />
+          <CampingSportsCarousel />
         </div>
       </div>
     </>
   );
 };
 
-const CapmpingSportsCarousel = () => {
+const CampingSportsCarousel = () => {
   const [index, setIndex] = useState(0);
   const [campingSpotsData, setCampingSpotsData] = useState([]);
   

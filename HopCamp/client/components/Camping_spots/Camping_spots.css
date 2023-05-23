@@ -13,6 +13,10 @@
     align-items: center;
     box-sizing: border-box;
     margin: 0;
+    padding-bottom: 48px;
+    padding-top: 48px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
     /* border: 1px solid lightgray; */
 }
 
