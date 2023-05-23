@@ -5,7 +5,7 @@ import "./Campers_also.css";
 const Campers_also = () => {
     
   return (
-    <>
+    <div className='soseosfeefsfefefwfwefwefwefewfewfwe'>
       <div className="camp-also-root-container">
         <div className="camp-also-container-centered">
           <div className="d-flex w-100">
@@ -16,7 +16,7 @@ const Campers_also = () => {
           <CampersAlsoCarousel />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
