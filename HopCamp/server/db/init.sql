@@ -5,40 +5,40 @@ CREATE DATABASE hopcamp;
 
 CREATE TABLE campers_also (
     id SERIAL PRIMARY KEY,
-    description VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL,
     pic_url TEXT,
     rating INTEGER NOT NULL,
     num_of_ratings INTEGER NOT NULL,
     acres INTEGER NOT NULL,
-    location VARCHAR(40) NOT NULL,
-    price NUMERIC(5,2)
+    location text,
+    price INTEGER
 );
 
 CREATE TABLE camping_spot (
     id SERIAL PRIMARY KEY,
-    description VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL,
     pic_url TEXT,
     rating INTEGER NOT NULL,
     num_of_ratings INTEGER NOT NULL,
     acres INTEGER NOT NULL,
-    location VARCHAR(40) NOT NULL,
-    price NUMERIC(5,2)
+    location text,
+    price INTEGER
 );
 
 CREATE TABLE photos (
   id SERIAL PRIMARY KEY,
-  pic VARCHAR (255),
-  url VARCHAR(1000)
+  pic text,
+  url text
 );
 
 CREATE TABLE rating (
     id SERIAL PRIMARY KEY,
-    username VARCHAR(25) NOT NULL,
+    username text NOT NULL,
     pic_url TEXT,
     date DATE,
     recommend BOOLEAN DEFAULT TRUE,
-    campsite VARCHAR(40) NOT NULL,
-    top_line VARCHAR(50),
+    campsite text NOT NULL,
+    top_line TEXT,
     narrative TEXT NOT NULL
 );
 
@@ -59,7 +59,7 @@ CREATE TABLE things_nearby (
 
 CREATE TABLE campsites (
   id serial PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
+  name text NOT NULL,
   available INT,
   demand TEXT,
   instantBook BOOLEAN,
@@ -67,7 +67,7 @@ CREATE TABLE campsites (
   capacity INT,
   restrictions TEXT,
   amenities TEXT,
-  price DECIMAL(8, 2),
+  price INTEGER,
   type varchar,
   imgURL TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
