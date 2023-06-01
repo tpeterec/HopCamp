@@ -10,13 +10,13 @@ export const options = {
 };
 
 export default function () {
-  http.get("http://localhost:5001/api/campsites");
-  http.get("http://localhost:5001/api/ratings");
-  http.get("http://localhost:5001/api/camping-spots");
-  http.get("http://localhost:5001/api/campers-also");
-  http.get("http://localhost:5001/api/photogallery");
-  http.get("http://localhost:5001/api/things-nearby");
-//   const res = http.get("http://localhost:5001/api/campsites");
-//   check(res, { "status was 200": (r) => r.status == 200 });
-//   sleep(1);
+  http.get("http://159.223.122.220:5001/api/campsites");
+  http.get("http://159.223.122.220:5001/api/ratings");
+  http.get("http://159.223.122.220:5001/api/camping-spots");
+  http.get("http://159.223.122.220:5001/api/campers-also");
+  http.get("http://159.223.122.220:5001/api/photogallery");
+  http.get("http://159.223.122.220:5001/api/things-nearby");
+  //   const res = http.get("http://159.223.122.220t:5001/api/campsites");
+  //   check(res, { "status was 200": (r) => r.status == 200 });
+  //   sleep(1);
 }
