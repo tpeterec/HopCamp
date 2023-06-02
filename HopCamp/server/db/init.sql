@@ -1,7 +1,3 @@
-DROP DATABASE IF EXISTS hopcamp;
-CREATE DATABASE hopcamp;
-\c hopcamp
-
 
 CREATE TABLE campers_also (
     id SERIAL PRIMARY KEY,
